@@ -4,7 +4,7 @@
 - **Brand Name:** Web Harbor Solutions[cite: 1]
 - **Founders:** Abdul Mateen & Jason Gill[cite: 1]
 - **Entity Type:** Digital Web Agency (US LLC & Pakistan SECP Registration compliant)
-- **Official Contact:** webharborsolutions@gmail.com[cite: 1]
+- **Official Contact:** contact@webharborsolutions.com[cite: 1]
 - **Target Audience:** Small business owners in US, UK, Canada, Australia (plumbers, bakeries, contractors, medical clinics, HVAC)[cite: 1].
 
 ## Technical Architecture
