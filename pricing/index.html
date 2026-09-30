@@ -1,495 +1,1195 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transparent Pricing — $99/Month Flat | Web Harbor Solutions</title>
-  <meta name="description" content="No hidden setup fees, no $5,000 invoices. A $100 setup fee and $99/month covers your custom site, hosting, domain, and monthly edits.">
-  <link rel="canonical" href="https://webharborsolutions.com/pricing/">
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E">
-
-  <!-- Prevent Theme Flash (FOUC) -->
-  <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      } catch (e) {}
-    })();
-  </script>
-
-  <!-- Tailwind CSS & Google Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            'primary-dark': '#0f172a',
-            'accent-blue': '#2563eb',
-            'accent-blue-hover': '#1d4ed8',
-            'accent-teal': '#0d9488',
-            'accent-teal-hover': '#0f766e',
-            'bg-neutral': '#f8fafc',
-            'surface-white': '#ffffff',
-            'text-primary': '#1e293b',
-            'text-muted': '#64748b',
-            'border-light': '#e2e8f0',
-            // Dark Mode Slate Tokens
-            'dark-bg': '#0f172a',
-            'dark-card': '#1e293b',
-            'dark-border': '#334155',
-            'dark-text': '#f8fafc',
-            'dark-muted': '#94a3b8',
-            'dark-blue': '#3b82f6',
-            'dark-teal': '#14b8a6',
-          },
-          fontFamily: {
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Transparent Pricing — $99/Month Flat | Web Harbor Solutions</title>
+    <meta
+      content="No hidden setup fees, no $5,000 invoices. A $100 setup fee and $99/month covers your custom site, hosting, domain, and monthly edits."
+      name="description"
+    />
+    <link href="https://webharborsolutions.com/pricing/" rel="canonical" />
+    <link
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E"
+      rel="icon"
+    />
+    <!-- Prevent Theme Flash (FOUC) -->
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
           }
-        }
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dark": "#090A0F",
+              "accent-blue": "#38bdf8",
+              "accent-blue-hover": "#0284c7",
+              "accent-teal": "#6366f1",
+              "accent-teal-hover": "#4f46e5",
+              "bg-neutral": "#090A0F",
+              "surface-white": "#ffffff",
+              "text-primary": "#F3F4F6",
+              "text-muted": "#9CA3AF",
+              "border-light": "rgba(255, 255, 255, 0.08)",
+              // Dark Mode Slate Tokens
+              "dark-bg": "#090A0F",
+              "dark-card": "#1e293b",
+              "dark-border": "rgba(255, 255, 255, 0.08)",
+              "dark-text": "#f8fafc",
+              "dark-muted": "#94a3b8",
+              "dark-blue": "#3b82f6",
+              "dark-teal": "#14b8a6",
+            },
+            fontFamily: {
+              display: ['"Plus Jakarta Sans"', "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
       }
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
-    .dark body, html.dark body { background-color: #0f172a; color: #f8fafc; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
-  </style>
-</head>
-<body class="bg-bg-neutral dark:bg-slate-900 text-text-primary dark:text-slate-50 antialiased min-h-screen flex flex-col selection:bg-accent-blue selection:text-white transition-colors duration-200">
+      .dark body,
+      html.dark body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <style>
+      /* 3D Tilt Card Base Styles */
+      .tilt-card-wrapper {
+        position: relative;
+        border-radius: 20px;
+        padding: 1px; /* Holds border gradient */
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform 0.15s ease-out;
+        will-change: transform;
+      }
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="bg-accent-teal text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase">Zero Risk</span>
-        <span>We build your complete custom website first. Pay only if you love it.</span>
-      </div>
-      <div class="flex items-center gap-4 text-slate-300">
-        <a href="mailto:contact@webharborsolutions.com" class="hover:text-white flex items-center gap-1 transition">
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          contact@webharborsolutions.com
-        </a>
-      </div>
-    </div>
-  </div>
+      .tilt-card-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: radial-gradient(
+          350px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+          rgba(56, 189, 248, 0.18),
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
 
-  <!-- Shared Global Navigation Header -->
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-border-light dark:border-slate-800 transition shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
-      <a href="../index.html" class="flex items-center gap-3 group" aria-label="Web Harbor Solutions Home">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="5" r="3"/>
-            <line x1="12" y1="22" x2="12" y2="8"/>
-            <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
-          </svg>
+      .tilt-card-inner {
+        position: relative;
+        background: rgba(18, 22, 34, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 19px;
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+        transform-style: preserve-3d;
+      }
+
+      .tilt-card-inner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          400px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+          rgba(255, 255, 255, 0.05),
+          transparent 65%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2;
+        transform: translateZ(35px);
+        transform-style: preserve-3d;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-bg-neutral dark:bg-dark-bg text-text-primary dark:text-slate-50 antialiased min-h-screen flex flex-col selection:bg-accent-blue selection:text-white transition-colors duration-200"
+  >
+    <!-- Micro-Texture Overlay (SVG Noise) -->
+    <div
+      class="pointer-events-none fixed inset-0 z-50 opacity-[0.035] mix-blend-screen"
+      style="
+        background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='noise'&gt;&lt;feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/&gt;&lt;/filter&gt;&lt;rect width='100%' height='100%' filter='url(%23noise)'/&gt;&lt;/svg&gt;&quot;);
+      "
+    ></div>
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-accent-teal text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase"
+            >Zero Risk</span
+          >
+          <span
+            >We build your complete custom website first. Pay only if you love
+            it.</span
+          >
         </div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-display font-extrabold text-lg text-primary-dark dark:text-slate-50 tracking-tight">Web Harbor</span>
-          <span class="text-[11px] font-bold text-accent-blue dark:text-blue-400 tracking-wider uppercase">Solutions</span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary Navigation">
-        <a href="../index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Home</a>
-        <a href="../how-it-works/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">How It Works</a>
-        <a href="../services/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Services</a>
-        <a href="../pricing/index.html" class="text-sm font-semibold text-accent-blue dark:text-blue-400 transition">Pricing</a>
-        <a href="../portfolio/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Portfolio</a>
-        <a href="../about/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">About Us</a>
-      </nav>
-
-      <!-- Desktop Actions: Theme Toggle & CTA -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-border-light dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
-          <svg class="sun-icon w-5 h-5 hidden dark:block text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
-          </svg>
-          <svg class="moon-icon w-5 h-5 block dark:hidden text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-          </svg>
-        </button>
-
-        <a href="../contact/index.html" class="hidden md:inline-flex bg-accent-blue hover:bg-accent-blue-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm items-center gap-1.5">
-          <span>Claim Free Demo</span>
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-
-        <!-- Mobile Hamburger Button -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md border border-border-light dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Toggle navigation" aria-expanded="false">
-          <svg id="menu-icon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-border-light dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3">
-      <a href="../index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Home</a>
-      <a href="../how-it-works/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">How It Works</a>
-      <a href="../services/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Services</a>
-      <a href="../pricing/index.html" class="block font-semibold text-accent-blue dark:text-blue-400 py-1">Pricing</a>
-      <a href="../portfolio/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Portfolio</a>
-      <a href="../about/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">About Us</a>
-      <a href="../contact/index.html" class="block w-full text-center bg-accent-blue text-white font-semibold py-2.5 rounded-lg shadow-sm mt-2">Claim Free Demo Website</a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="flex-grow">
-    <!-- Header / Hero -->
-    <section class="py-16 md:py-20 bg-gradient-to-b from-blue-50/60 to-bg-neutral dark:from-slate-900 dark:to-slate-950 border-b border-border-light dark:border-slate-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <span class="inline-flex items-center gap-1.5 bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-accent-teal dark:text-teal-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-4">
-          Flat &amp; Honest
-        </span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-primary-dark dark:text-slate-50 tracking-tight mb-4">
-          One Flat Plan. Zero Expensive Surprises.
-        </h1>
-        <p class="text-base sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
-          No $5,000 upfront design invoices. No hourly fees to fix broken plugins. Just complete peace of mind for $99 a month.
-        </p>
-      </div>
-    </section>
-
-    <!-- Pricing Card: The Harbor Complete Plan -->
-    <section class="py-16 md:py-20 bg-white dark:bg-slate-900/60">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="bg-gradient-to-b from-white to-slate-50 dark:from-slate-800 dark:to-slate-850 rounded-3xl border-2 border-accent-blue p-8 sm:p-12 shadow-xl relative overflow-hidden">
-          <div class="absolute top-0 right-0 bg-accent-blue text-white text-[11px] font-extrabold px-6 py-1.5 rounded-bl-xl uppercase tracking-wider">
-            Most Popular
-          </div>
-
-          <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-border-light dark:border-slate-700">
-            <div>
-              <span class="text-accent-teal dark:text-teal-400 font-bold text-xs uppercase tracking-wider block mb-1">Turnkey Website Solution</span>
-              <h2 class="text-3xl font-extrabold text-primary-dark dark:text-slate-50">The Harbor Complete Plan</h2>
-              <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">Everything required to establish and run your modern business website.</p>
-            </div>
-            <div class="text-left md:text-right flex-shrink-0">
-              <div class="flex items-baseline gap-1">
-                <span class="text-5xl font-black text-primary-dark dark:text-slate-50">$99</span>
-                <span class="text-slate-500 dark:text-slate-400 font-bold text-base">/ month</span>
-              </div>
-              <p class="text-xs font-semibold text-accent-blue dark:text-blue-400 mt-1">$100 setup fee ($50 launch + $50 live)</p>
-            </div>
-          </div>
-
-          <!-- Feature Breakdown Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 py-8 border-b border-border-light dark:border-slate-700">
-            <div class="space-y-3.5">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-sm text-slate-700 dark:text-slate-200"><strong>Hand-Coded Website:</strong> Tailored to your trade (up to 5 pages)</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-sm text-slate-700 dark:text-slate-200"><strong>Edge Cloudflare Hosting:</strong> 99.99% uptime with SSL</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-sm text-slate-700 dark:text-slate-200"><strong>Custom Domain Included:</strong> Managed renewals ($0 extra)</span>
-              </div>
-            </div>
-
-            <div class="space-y-3.5">
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-sm text-slate-700 dark:text-slate-200"><strong>3 Minor Content Edits Monthly:</strong> Hours, photos, text updates</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-sm text-slate-700 dark:text-slate-200"><strong>Mobile &amp; Speed Optimized:</strong> Click-to-call mobile header</span>
-              </div>
-              <div class="flex items-start gap-3">
-                <svg class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span class="text-sm text-slate-700 dark:text-slate-200"><strong>Local SEO &amp; Schema:</strong> Google-ready structured data</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div class="text-xs text-slate-500 dark:text-slate-400 space-y-1">
-              <p>&bull; 6-Month Initial Term Commitment</p>
-              <p>&bull; Cancel anytime with 30-day notice after 6 months</p>
-              <p>&bull; Domain released at zero cost if you ever leave</p>
-            </div>
-            <a href="../contact/index.html" class="w-full sm:w-auto bg-accent-blue hover:bg-accent-blue-hover text-white text-base font-bold px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2">
-              <span>Claim Your Free Demo</span>
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Break-Even Visualizer -->
-    <section class="py-16 md:py-20 bg-bg-neutral dark:bg-slate-900 border-y border-border-light dark:border-slate-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="text-accent-teal dark:text-teal-400 font-bold text-xs uppercase tracking-wider">Break-Even Visualizer</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3">How Fast Does This Pay For Itself?</h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">Select your industry below to see how many new customer calls you need each year to profit from our $99/mo plan.</p>
-        </div>
-
-        <!-- Industry Selector Buttons -->
-        <div class="flex flex-wrap justify-center gap-2.5 mb-8">
-          <button type="button" data-val="1200" data-label="Plumbing &amp; Water Heaters" class="industry-btn bg-accent-blue text-white dark:bg-blue-600 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-accent-blue transition shadow-xs">
-            Plumbing ($1,200 avg)
-          </button>
-          <button type="button" data-val="2500" data-label="Dental Clinic" class="industry-btn bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-slate-700 transition shadow-xs">
-            Dental ($2,500 avg)
-          </button>
-          <button type="button" data-val="800" data-label="Landscaping &amp; Grounds" class="industry-btn bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-slate-700 transition shadow-xs">
-            Landscaping ($800 avg)
-          </button>
-          <button type="button" data-val="5000" data-label="Roofing &amp; Siding" class="industry-btn bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-slate-700 transition shadow-xs">
-            Roofing ($5,000 avg)
-          </button>
-          <button type="button" data-val="900" data-label="Auto Repair &amp; Brakes" class="industry-btn bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-slate-700 transition shadow-xs">
-            Auto Repair ($900 avg)
-          </button>
-        </div>
-
-        <!-- Result Box -->
-        <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-border-light dark:border-slate-700 text-center shadow-xs">
-          <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2">Break-Even Analysis</span>
-          <div id="break-even-calc-result" class="text-2xl sm:text-3xl font-extrabold text-accent-teal dark:text-teal-400 mb-2">
-            At $99/month, gaining just ONE single new customer from your website pays for your entire year of service.
-          </div>
-          <p id="break-even-details" class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm">
-            Based on an average job value of $1,200 in Plumbing &amp; Water Heaters vs. Web Harbor's total Year 1 cost ($1,288).
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 1-Year Cost Comparison Matrix -->
-    <section class="py-16 md:py-20 bg-white dark:bg-slate-900/60">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-accent-blue dark:text-blue-400 font-bold text-xs uppercase tracking-wider">The Real Math</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3">1-Year Total Cost of Ownership</h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">Compare direct out-of-pocket costs over your first 12 months in business.</p>
-        </div>
-
-        <div class="overflow-x-auto bg-white dark:bg-slate-800 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs">
-          <table class="w-full text-left text-sm border-collapse">
-            <thead>
-              <tr class="bg-slate-100/80 dark:bg-slate-900/80 border-b border-border-light dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold">
-                <th class="p-4 sm:p-5">Expense Category</th>
-                <th class="p-4 sm:p-5">Traditional Agency</th>
-                <th class="p-4 sm:p-5">DIY Website Builder</th>
-                <th class="p-4 sm:p-5 bg-blue-50 dark:bg-blue-950/50 text-accent-blue dark:text-blue-400">Web Harbor Solutions</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-border-light dark:divide-slate-700">
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">Initial Build / Setup</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$4,000 upfront</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$0 (30–60 hours of your time)</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400">$100 total setup</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">12 Months Hosting</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$360 ($30/mo)</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$360 ($30/mo)</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400">Included in $99/mo</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">12 Months Domain &amp; SSL</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$50 / year</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$20 / year</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400">Included at $0</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">Updates &amp; Maintenance</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$1,800 ($150/hr &times; 12)</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">You handle updates yourself</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400">Included (3 edits/mo)</td>
-              </tr>
-              <tr class="bg-slate-50/70 dark:bg-slate-900/40 font-bold text-slate-900 dark:text-slate-100">
-                <td class="p-4 sm:p-5">Total 1st Year Cost</td>
-                <td class="p-4 sm:p-5 text-red-600 dark:text-red-400">$6,210+</td>
-                <td class="p-4 sm:p-5 text-slate-700 dark:text-slate-300">$380 + ~60 hours work</td>
-                <td class="p-4 sm:p-5 bg-blue-100/70 dark:bg-blue-950/70 text-accent-blue dark:text-blue-400 text-base">$1,288 total</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Frequently Asked Questions -->
-    <section class="py-16 md:py-20 bg-bg-neutral dark:bg-slate-900 border-t border-border-light dark:border-slate-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mb-3">Frequently Asked Questions</h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">Clear, straight answers to the questions local business owners ask most.</p>
-        </div>
-
-        <div class="space-y-4">
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs">
-            <h3 class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2">What if I don't like the demo website you build?</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              You pay absolutely nothing. We build the complete demo on our own staging servers before asking for a dime. If it doesn't meet your standards, we shake hands and part ways with zero obligation.
-            </p>
-          </div>
-
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs">
-            <h3 class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2">Why is there a 6-month commitment?</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Because we invest our own time and engineering capital upfront to build your entire website for free, the 6-month term allows us to recover our build costs while keeping your monthly retainer at an accessible $99/mo flat.
-            </p>
-          </div>
-
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs">
-            <h3 class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2">Do I own my domain name?</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Yes, 100%. If you already own your domain, you retain full ownership. If we register it on your behalf, we transfer it to your registrar at zero cost upon cancellation after your 6-month term.
-            </p>
-          </div>
-
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs">
-            <h3 class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2">What counts as a "minor monthly edit"?</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Minor edits include changing phone numbers, swapping photos, updating team bios, modifying operating hours, adding a new seasonal special, or altering service prices. Simply email us and we handle it within 24 hours.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Shared Global Footer -->
-  <footer class="bg-primary-dark dark:bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div class="space-y-4 md:col-span-1">
-          <a href="../index.html" class="flex items-center gap-2.5 text-white font-display font-bold text-lg">
-            <div class="w-8 h-8 rounded bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
-            </div>
-            <span>Web Harbor</span>
+        <div class="flex items-center gap-4 text-slate-300">
+          <a
+            class="hover:text-white flex items-center gap-1 transition"
+            href="mailto:contact@webharborsolutions.com"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            contact@webharborsolutions.com
           </a>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            We build custom, high-converting websites for local service businesses before you pay a dime. Fast, reliable, and zero upfront risk.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">US LLC &amp; SECP Compliant</span>
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">Cloudflare Edge Hosted</span>
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">100% Free Spec Demo</span>
-          </div>
         </div>
-
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Navigation</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
-            <li><a href="../how-it-works/index.html" class="hover:text-white transition">How It Works</a></li>
-            <li><a href="../services/index.html" class="hover:text-white transition">Services</a></li>
-            <li><a href="../pricing/index.html" class="text-white font-semibold transition">Pricing &amp; Plans</a></li>
-            <li><a href="../portfolio/index.html" class="hover:text-white transition">Live Portfolio</a></li>
-            <li><a href="../about/index.html" class="hover:text-white transition">About Us</a></li>
-            <li><a href="../contact/index.html" class="hover:text-white transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Legal &amp; Compliance</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="../privacy/index.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="../terms/index.html" class="hover:text-white transition">Terms of Service &amp; SLA</a></li>
-            <li><a href="../liability/index.html" class="hover:text-white transition">Client Content &amp; Liability</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Founders &amp; Contact</h3>
-          <p class="text-xs text-slate-400 mb-2"><strong class="text-white">Founders:</strong> Abdul Mateen &amp; Jason Gill</p>
-          <p class="text-xs text-slate-400 mb-2"><strong class="text-white">Email:</strong> <a href="mailto:contact@webharborsolutions.com" class="hover:text-white transition">contact@webharborsolutions.com</a></p>
-          <p class="text-xs text-slate-400"><strong class="text-white">Guaranteed Response:</strong> Within 12 business hours</p>
-        </div>
-      </div>
-
-      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p>&copy; 2026 Web Harbor Solutions. All rights reserved.</p>
-        <p>Serving small businesses across the US, UK, Canada, and Australia.</p>
       </div>
     </div>
-  </footer>
+    <!-- Shared Global Navigation Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-border-light dark:border-dark-border transition shadow-sm"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3"
+      >
+        <a
+          aria-label="Web Harbor Solutions Home"
+          class="flex items-center gap-3 group"
+          href="../index.html"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white shadow-md group-hover:scale-105 transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.2"
+              viewbox="0 0 24 24"
+            >
+              <circle cx="12" cy="5" r="3"></circle>
+              <line x1="12" x2="12" y1="22" y2="8"></line>
+              <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+            </svg>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span
+              class="font-display font-extrabold text-lg text-primary-dark dark:text-slate-50 tracking-tight"
+              >Web Harbor</span
+            >
+            <span
+              class="text-[11px] font-bold text-accent-blue dark:text-blue-400 tracking-wider uppercase"
+              >Solutions</span
+            >
+          </div>
+        </a>
+        <!-- Desktop Nav -->
+        <nav
+          aria-label="Primary Navigation"
+          class="hidden md:flex items-center gap-6"
+        >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="../index.html"
+            >Home</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="../how-it-works/index.html"
+            >How It Works</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="../services/index.html"
+            >Services</a
+          >
+          <a
+            class="text-sm font-semibold text-accent-blue dark:text-blue-400 transition"
+            href="../pricing/index.html"
+            >Pricing</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="../portfolio/index.html"
+            >Portfolio</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="../about/index.html"
+            >About Us</a
+          >
+        </nav>
+        <!-- Desktop Actions: Theme Toggle & CTA -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Theme Toggle Button -->
+          <button
+            aria-label="Toggle Dark and Light Mode"
+            class="theme-toggle-btn p-2 rounded-lg border border-border-light dark:border-dark-border bg-slate-50 dark:bg-dark-surface text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+            title="Toggle theme"
+            type="button"
+          >
+            <svg
+              class="sun-icon w-5 h-5 hidden dark:block text-amber-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg
+              class="moon-icon w-5 h-5 block dark:hidden text-slate-700"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          <a
+            class="hidden md:inline-flex bg-accent-blue hover:bg-accent-blue-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm items-center gap-1.5"
+            href="../contact/index.html"
+          >
+            <span>Claim Free Demo</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <!-- Mobile Hamburger Button -->
+          <button
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="md:hidden p-2 rounded-md border border-border-light dark:border-dark-border text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            id="mobile-menu-btn"
+            type="button"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              id="menu-icon"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <svg
+              class="w-6 h-6 hidden"
+              fill="none"
+              id="close-icon"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Drawer -->
+      <div
+        class="hidden md:hidden border-t border-border-light dark:border-dark-border bg-white dark:bg-dark-bg px-4 pt-3 pb-6 space-y-3"
+        id="mobile-menu"
+      >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="../index.html"
+          >Home</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="../how-it-works/index.html"
+          >How It Works</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="../services/index.html"
+          >Services</a
+        >
+        <a
+          class="block font-semibold text-accent-blue dark:text-blue-400 py-1"
+          href="../pricing/index.html"
+          >Pricing</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="../portfolio/index.html"
+          >Portfolio</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="../about/index.html"
+          >About Us</a
+        >
+        <a
+          class="block w-full text-center bg-accent-blue text-white font-semibold py-2.5 rounded-lg shadow-sm mt-2"
+          href="../contact/index.html"
+          >Claim Free Demo Website</a
+        >
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- Header / Hero -->
+      <section
+        class="py-16 md:py-20 bg-gradient-to-b from-blue-50/60 to-bg-neutral dark:from-slate-900 dark:to-slate-950 border-b border-border-light dark:border-dark-border"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <span
+            class="inline-flex items-center gap-1.5 bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-accent-teal dark:text-teal-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-4"
+          >
+            Flat &amp; Honest
+          </span>
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold text-primary-dark dark:text-slate-50 tracking-tight mb-4 overflow-hidden"
+          >
+            <span class="reveal-text block">
+              One Flat Plan. Zero Expensive Surprises.
+            </span>
+          </h1>
+          <p
+            class="text-base sm:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed"
+          >
+            No $5,000 upfront design invoices. No hourly fees to fix broken
+            plugins. Just complete peace of mind for $99 a month.
+          </p>
+        </div>
+      </section>
+      <!-- Pricing Card: The Harbor Complete Plan -->
+      <section class="py-16 md:py-20 bg-white dark:bg-dark-bg/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div
+            class="bg-gradient-to-b from-white to-slate-50 dark:from-slate-800 dark:to-slate-850 rounded-3xl border-2 border-accent-blue p-8 sm:p-12 shadow-xl relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 right-0 bg-accent-blue text-white text-[11px] font-extrabold px-6 py-1.5 rounded-bl-xl uppercase tracking-wider"
+            >
+              Most Popular
+            </div>
+            <div
+              class="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-8 border-b border-border-light dark:border-dark-border"
+            >
+              <div>
+                <span
+                  class="text-accent-teal dark:text-teal-400 font-bold text-xs uppercase tracking-wider block mb-1"
+                  >Turnkey Website Solution</span
+                >
+                <h2
+                  class="text-3xl font-extrabold text-primary-dark dark:text-slate-50 overflow-hidden"
+                >
+                  <span class="reveal-text block"
+                    >The Harbor Complete Plan</span
+                  >
+                </h2>
+                <p class="text-slate-600 dark:text-slate-400 text-sm mt-1">
+                  Everything required to establish and run your modern business
+                  website.
+                </p>
+              </div>
+              <div class="text-left md:text-right flex-shrink-0">
+                <div class="flex items-baseline gap-1">
+                  <span
+                    class="text-5xl font-black text-primary-dark dark:text-slate-50"
+                    >$99</span
+                  >
+                  <span
+                    class="text-slate-500 dark:text-slate-400 font-bold text-base"
+                    >/ month</span
+                  >
+                </div>
+                <p
+                  class="text-xs font-semibold text-accent-blue dark:text-blue-400 mt-1"
+                >
+                  $100 setup fee ($50 launch + $50 live)
+                </p>
+              </div>
+            </div>
+            <!-- Feature Breakdown Grid -->
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-6 py-8 border-b border-border-light dark:border-dark-border"
+            >
+              <div class="space-y-3.5">
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewbox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="text-sm text-slate-700 dark:text-slate-200"
+                    ><strong>Hand-Coded Website:</strong> Tailored to your trade
+                    (up to 5 pages)</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewbox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="text-sm text-slate-700 dark:text-slate-200"
+                    ><strong>Edge Cloudflare Hosting:</strong> 99.99% uptime
+                    with SSL</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewbox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="text-sm text-slate-700 dark:text-slate-200"
+                    ><strong>Custom Domain Included:</strong> Managed renewals
+                    ($0 extra)</span
+                  >
+                </div>
+              </div>
+              <div class="space-y-3.5">
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewbox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="text-sm text-slate-700 dark:text-slate-200"
+                    ><strong>3 Minor Content Edits Monthly:</strong> Hours,
+                    photos, text updates</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewbox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="text-sm text-slate-700 dark:text-slate-200"
+                    ><strong>Mobile &amp; Speed Optimized:</strong>
+                    Click-to-call mobile header</span
+                  >
+                </div>
+                <div class="flex items-start gap-3">
+                  <svg
+                    class="w-5 h-5 text-accent-teal dark:text-teal-400 flex-shrink-0 mt-0.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewbox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span class="text-sm text-slate-700 dark:text-slate-200"
+                    ><strong>Local SEO &amp; Schema:</strong> Google-ready
+                    structured data</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-6"
+            >
+              <div class="text-xs text-slate-500 dark:text-slate-400 space-y-1">
+                <p>• 6-Month Initial Term Commitment</p>
+                <p>• Cancel anytime with 30-day notice after 6 months</p>
+                <p>• Domain released at zero cost if you ever leave</p>
+              </div>
+              <a
+                class="w-full sm:w-auto bg-accent-blue hover:bg-accent-blue-hover text-white text-base font-bold px-8 py-4 rounded-xl shadow-lg transition flex items-center justify-center gap-2"
+                href="../contact/index.html"
+              >
+                <span>Claim Your Free Demo</span>
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewbox="0 0 24 24"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive Break-Even Visualizer -->
+      <section
+        class="py-16 md:py-20 bg-bg-neutral dark:bg-dark-bg border-y border-border-light dark:border-dark-border"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span
+              class="text-accent-teal dark:text-teal-400 font-bold text-xs uppercase tracking-wider"
+              >Break-Even Visualizer</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block"
+                >How Fast Does This Pay For Itself?</span
+              >
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Select your industry below to see how many new customer calls you
+              need each year to profit from our $99/mo plan.
+            </p>
+          </div>
+          <!-- Industry Selector Buttons -->
+          <div class="flex flex-wrap justify-center gap-2.5 mb-8">
+            <button
+              class="industry-btn bg-accent-blue text-white dark:bg-blue-600 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-accent-blue transition shadow-xs"
+              data-label="Plumbing &amp; Water Heaters"
+              data-val="1200"
+              type="button"
+            >
+              Plumbing ($1,200 avg)
+            </button>
+            <button
+              class="industry-btn bg-white dark:bg-dark-surface text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-dark-border transition shadow-xs"
+              data-label="Dental Clinic"
+              data-val="2500"
+              type="button"
+            >
+              Dental ($2,500 avg)
+            </button>
+            <button
+              class="industry-btn bg-white dark:bg-dark-surface text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-dark-border transition shadow-xs"
+              data-label="Landscaping &amp; Grounds"
+              data-val="800"
+              type="button"
+            >
+              Landscaping ($800 avg)
+            </button>
+            <button
+              class="industry-btn bg-white dark:bg-dark-surface text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-dark-border transition shadow-xs"
+              data-label="Roofing &amp; Siding"
+              data-val="5000"
+              type="button"
+            >
+              Roofing ($5,000 avg)
+            </button>
+            <button
+              class="industry-btn bg-white dark:bg-dark-surface text-slate-700 dark:text-slate-300 font-semibold text-xs sm:text-sm px-4 py-2 rounded-xl border border-border-light dark:border-dark-border transition shadow-xs"
+              data-label="Auto Repair &amp; Brakes"
+              data-val="900"
+              type="button"
+            >
+              Auto Repair ($900 avg)
+            </button>
+          </div>
+          <!-- Result Box -->
+          <div
+            class="bg-white dark:bg-dark-surface p-8 rounded-3xl border border-border-light dark:border-dark-border text-center shadow-xs"
+          >
+            <span
+              class="text-xs font-bold text-slate-400 uppercase tracking-wider block mb-2"
+              >Break-Even Analysis</span
+            >
+            <div
+              class="text-2xl sm:text-3xl font-extrabold text-accent-teal dark:text-teal-400 mb-2"
+              id="break-even-calc-result"
+            >
+              At $99/month, gaining just ONE single new customer from your
+              website pays for your entire year of service.
+            </div>
+            <p
+              class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm"
+              id="break-even-details"
+            >
+              Based on an average job value of $1,200 in Plumbing &amp; Water
+              Heaters vs. Web Harbor's total Year 1 cost ($1,288).
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- 1-Year Cost Comparison Matrix -->
+      <section class="py-16 md:py-20 bg-white dark:bg-dark-bg/60">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+              class="text-accent-blue dark:text-blue-400 font-bold text-xs uppercase tracking-wider"
+              >The Real Math</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block"
+                >1-Year Total Cost of Ownership</span
+              >
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Compare direct out-of-pocket costs over your first 12 months in
+              business.
+            </p>
+          </div>
+          <div
+            class="overflow-x-auto bg-white dark:bg-dark-surface rounded-2xl border border-border-light dark:border-dark-border shadow-xs"
+          >
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr
+                  class="bg-slate-100/80 dark:bg-dark-bg/80 border-b border-border-light dark:border-dark-border text-slate-700 dark:text-slate-300 font-bold"
+                >
+                  <th class="p-4 sm:p-5">Expense Category</th>
+                  <th class="p-4 sm:p-5">Traditional Agency</th>
+                  <th class="p-4 sm:p-5">DIY Website Builder</th>
+                  <th
+                    class="p-4 sm:p-5 bg-blue-50 dark:bg-blue-950/50 text-accent-blue dark:text-blue-400"
+                  >
+                    Web Harbor Solutions
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-light dark:divide-slate-700">
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    Initial Build / Setup
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $4,000 upfront
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $0 (30–60 hours of your time)
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400"
+                  >
+                    $100 total setup
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    12 Months Hosting
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $360 ($30/mo)
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $360 ($30/mo)
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400"
+                  >
+                    Included in $99/mo
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    12 Months Domain &amp; SSL
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $50 / year
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $20 / year
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400"
+                  >
+                    Included at $0
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    Updates &amp; Maintenance
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $1,800 ($150/hr × 12)
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    You handle updates yourself
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400"
+                  >
+                    Included (3 edits/mo)
+                  </td>
+                </tr>
+                <tr
+                  class="bg-slate-50/70 dark:bg-dark-bg/40 font-bold text-slate-900 dark:text-slate-100"
+                >
+                  <td class="p-4 sm:p-5">Total 1st Year Cost</td>
+                  <td class="p-4 sm:p-5 text-red-600 dark:text-red-400">
+                    $6,210+
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-700 dark:text-slate-300">
+                    $380 + ~60 hours work
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-100/70 dark:bg-blue-950/70 text-accent-blue dark:text-blue-400 text-base"
+                  >
+                    $1,288 total
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+      <!-- Frequently Asked Questions -->
+      <section
+        class="py-16 md:py-20 bg-bg-neutral dark:bg-dark-bg border-t border-border-light dark:border-dark-border"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block">Frequently Asked Questions</span>
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Clear, straight answers to the questions local business owners ask
+              most.
+            </p>
+          </div>
+          <div class="space-y-4">
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs">
+                <div class="card-content">
+                  <h3
+                    class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2"
+                  >
+                    What if I don't like the demo website you build?
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    You pay absolutely nothing. We build the complete demo on
+                    our own staging servers before asking for a dime. If it
+                    doesn't meet your standards, we shake hands and part ways
+                    with zero obligation.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs">
+                <div class="card-content">
+                  <h3
+                    class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2"
+                  >
+                    Why is there a 6-month commitment?
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Because we invest our own time and engineering capital
+                    upfront to build your entire website for free, the 6-month
+                    term allows us to recover our build costs while keeping your
+                    monthly retainer at an accessible $99/mo flat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs">
+                <div class="card-content">
+                  <h3
+                    class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2"
+                  >
+                    Do I own my domain name?
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Yes, 100%. If you already own your domain, you retain full
+                    ownership. If we register it on your behalf, we transfer it
+                    to your registrar at zero cost upon cancellation after your
+                    6-month term.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs">
+                <div class="card-content">
+                  <h3
+                    class="font-bold text-primary-dark dark:text-slate-50 text-base mb-2"
+                  >
+                    What counts as a "minor monthly edit"?
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Minor edits include changing phone numbers, swapping photos,
+                    updating team bios, modifying operating hours, adding a new
+                    seasonal special, or altering service prices. Simply email
+                    us and we handle it within 24 hours.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Shared Global Footer -->
+    <footer
+      class="bg-primary-dark dark:bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-800"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          <div class="space-y-4 md:col-span-1">
+            <a
+              class="flex items-center gap-2.5 text-white font-display font-bold text-lg"
+              href="../index.html"
+            >
+              <div
+                class="w-8 h-8 rounded bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  viewbox="0 0 24 24"
+                >
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <line x1="12" x2="12" y1="22" y2="8"></line>
+                  <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                </svg>
+              </div>
+              <span>Web Harbor</span>
+            </a>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              We build custom, high-converting websites for local service
+              businesses before you pay a dime. Fast, reliable, and zero upfront
+              risk.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >US LLC &amp; SECP Compliant</span
+              >
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >Cloudflare Edge Hosted</span
+              >
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >100% Free Spec Demo</span
+              >
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Navigation
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a class="hover:text-white transition" href="../index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../how-it-works/index.html"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../services/index.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-white font-semibold transition"
+                  href="../pricing/index.html"
+                  >Pricing &amp; Plans</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../portfolio/index.html"
+                  >Live Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../about/index.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../contact/index.html"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Legal &amp; Compliance
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../privacy/index.html"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../terms/index.html"
+                  >Terms of Service &amp; SLA</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="../liability/index.html"
+                  >Client Content &amp; Liability</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Founders &amp; Contact
+            </h3>
+            <p class="text-xs text-slate-400 mb-2">
+              <strong class="text-white">Founders:</strong> Abdul Mateen &amp;
+              Jason Gill
+            </p>
+            <p class="text-xs text-slate-400 mb-2">
+              <strong class="text-white">Email:</strong>
+              <a
+                class="hover:text-white transition"
+                href="mailto:contact@webharborsolutions.com"
+                >contact@webharborsolutions.com</a
+              >
+            </p>
+            <p class="text-xs text-slate-400">
+              <strong class="text-white">Guaranteed Response:</strong> Within 12
+              business hours
+            </p>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500"
+        >
+          <p>© 2026 Web Harbor Solutions. All rights reserved.</p>
+          <p>
+            Serving small businesses across the US, UK, Canada, and Australia.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Interactive Scripts -->
+    <script>
+      // Theme Toggle
+      function initThemeToggle() {
+        const toggleBtns = document.querySelectorAll(".theme-toggle-btn");
+        toggleBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const isDark = document.documentElement.classList.toggle("dark");
+            try {
+              localStorage.setItem("theme", isDark ? "dark" : "light");
+            } catch (e) {}
+          });
+        });
+      }
+      initThemeToggle();
 
-  <!-- Interactive Scripts -->
-  <script>
-    // Theme Toggle
-    function initThemeToggle() {
-      const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-      toggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const isDark = document.documentElement.classList.toggle('dark');
-          try {
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          } catch (e) {}
+      // Navigation toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
+
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const isOpen = !menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          menuIcon.classList.toggle("hidden", !isOpen);
+          closeIcon.classList.toggle("hidden", isOpen);
+          btn.setAttribute("aria-expanded", String(!isOpen));
+        });
+      }
+
+      // Break-even industry switcher
+      const industryBtns = document.querySelectorAll(".industry-btn");
+      const calcResult = document.getElementById("break-even-calc-result");
+      const calcDetails = document.getElementById("break-even-details");
+
+      industryBtns.forEach((b) => {
+        b.addEventListener("click", () => {
+          industryBtns.forEach((item) => {
+            item.classList.remove(
+              "bg-accent-blue",
+              "text-white",
+              "dark:bg-blue-600",
+              "border-accent-blue",
+            );
+            item.classList.add(
+              "bg-white",
+              "dark:bg-dark-surface",
+              "text-slate-700",
+              "dark:text-slate-300",
+              "border-border-light",
+              "dark:border-dark-border",
+            );
+          });
+          b.classList.remove(
+            "bg-white",
+            "dark:bg-dark-surface",
+            "text-slate-700",
+            "dark:text-slate-300",
+            "border-border-light",
+            "dark:border-dark-border",
+          );
+          b.classList.add(
+            "bg-accent-blue",
+            "text-white",
+            "dark:bg-blue-600",
+            "border-accent-blue",
+          );
+
+          const val = parseInt(b.getAttribute("data-val"));
+          const label = b.getAttribute("data-label");
+          const annualSpend = 1288;
+          const customersNeeded = Math.ceil(annualSpend / val);
+
+          calcResult.textContent = `At $99/month, gaining just ONE single new customer from your website pays for your entire year of service.`;
+          calcDetails.textContent = `Based on an average job value of $${val.toLocaleString()} in ${label} vs. Web Harbor's total Year 1 cost ($1,288).`;
         });
       });
-    }
-    initThemeToggle();
-
-    // Navigation toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        const isOpen = !menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        menuIcon.classList.toggle('hidden', !isOpen);
-        closeIcon.classList.toggle('hidden', isOpen);
-        btn.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
-
-    // Break-even industry switcher
-    const industryBtns = document.querySelectorAll('.industry-btn');
-    const calcResult = document.getElementById('break-even-calc-result');
-    const calcDetails = document.getElementById('break-even-details');
-
-    industryBtns.forEach(b => {
-      b.addEventListener('click', () => {
-        industryBtns.forEach(item => {
-          item.classList.remove('bg-accent-blue', 'text-white', 'dark:bg-blue-600', 'border-accent-blue');
-          item.classList.add('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border-border-light', 'dark:border-slate-700');
-        });
-        b.classList.remove('bg-white', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border-border-light', 'dark:border-slate-700');
-        b.classList.add('bg-accent-blue', 'text-white', 'dark:bg-blue-600', 'border-accent-blue');
-
-        const val = parseInt(b.getAttribute('data-val'));
-        const label = b.getAttribute('data-label');
-        const annualSpend = 1288;
-        const customersNeeded = Math.ceil(annualSpend / val);
-
-        calcResult.textContent = `At $99/month, gaining just ONE single new customer from your website pays for your entire year of service.`;
-        calcDetails.textContent = `Based on an average job value of $${val.toLocaleString()} in ${label} vs. Web Harbor's total Year 1 cost ($1,288).`;
-      });
-    });
-  </script>
-</body>
+    </script>
+    <script src="../js/main.js"></script>
+  </body>
 </html>

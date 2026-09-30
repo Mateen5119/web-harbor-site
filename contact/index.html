@@ -1,401 +1,1037 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us / Claim Your Demo | Web Harbor Solutions</title>
-  <meta name="description" content="Get in touch with Abdul Mateen and Jason Gill. Request your free custom website demo with zero upfront obligation.">
-  <link rel="canonical" href="https://webharborsolutions.com/contact/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us / Claim Your Demo | Web Harbor Solutions</title>
+    <meta
+      name="description"
+      content="Get in touch with Abdul Mateen and Jason Gill. Request your free custom website demo with zero upfront obligation."
+    />
+    <link rel="canonical" href="https://webharborsolutions.com/contact/" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E"
+    />
 
-  <!-- Prevent Theme Flash (FOUC) -->
-  <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      } catch (e) {}
-    })();
-  </script>
-
-  <!-- Tailwind CSS & Google Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            'primary-dark': '#0f172a',
-            'accent-blue': '#2563eb',
-            'accent-blue-hover': '#1d4ed8',
-            'accent-teal': '#0d9488',
-            'accent-teal-hover': '#0f766e',
-            'bg-neutral': '#f8fafc',
-            'surface-white': '#ffffff',
-            'text-primary': '#1e293b',
-            'text-muted': '#64748b',
-            'border-light': '#e2e8f0',
-            // Dark Mode Slate Tokens
-            'dark-bg': '#0f172a',
-            'dark-card': '#1e293b',
-            'dark-border': '#334155',
-            'dark-text': '#f8fafc',
-            'dark-muted': '#94a3b8',
-            'dark-blue': '#3b82f6',
-            'dark-teal': '#14b8a6',
-          },
-          fontFamily: {
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
+    <!-- Prevent Theme Flash (FOUC) -->
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
           }
-        }
+        } catch (e) {}
+      })();
+    </script>
+
+    <!-- Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dark": "#090A0F",
+              "accent-blue": "#38bdf8",
+              "accent-blue-hover": "#0284c7",
+              "accent-teal": "#6366f1",
+              "accent-teal-hover": "#4f46e5",
+              "bg-neutral": "#090A0F",
+              "surface-white": "#ffffff",
+              "text-primary": "#F3F4F6",
+              "text-muted": "#9CA3AF",
+              "border-light": "rgba(255, 255, 255, 0.08)",
+              // Dark Mode Slate Tokens
+              "dark-bg": "#090A0F",
+              "dark-card": "#1e293b",
+              "dark-border": "rgba(255, 255, 255, 0.08)",
+              "dark-text": "#f8fafc",
+              "dark-muted": "#94a3b8",
+              "dark-blue": "#3b82f6",
+              "dark-teal": "#14b8a6",
+            },
+            fontFamily: {
+              display: ['"Plus Jakarta Sans"', "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
       }
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
-    .dark body, html.dark body { background-color: #0f172a; color: #f8fafc; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
-  </style>
-</head>
-<body class="bg-bg-neutral dark:bg-slate-900 text-text-primary dark:text-slate-50 antialiased min-h-screen flex flex-col selection:bg-accent-blue selection:text-white transition-colors duration-200">
+      .dark body,
+      html.dark body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
 
-  <!-- Top Announcement Bar -->
-  <div class="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="bg-accent-teal text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase">Zero Risk</span>
-        <span>We build your complete custom website first. Pay only if you love it.</span>
-      </div>
-      <div class="flex items-center gap-4 text-slate-300">
-        <a href="mailto:contact@webharborsolutions.com" class="hover:text-white flex items-center gap-1 transition">
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          contact@webharborsolutions.com
-        </a>
-      </div>
-    </div>
-  </div>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
 
-  <!-- Shared Global Navigation Header -->
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-border-light dark:border-slate-800 transition shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
-      <a href="../index.html" class="flex items-center gap-3 group" aria-label="Web Harbor Solutions Home">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="5" r="3"/>
-            <line x1="12" y1="22" x2="12" y2="8"/>
-            <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
-          </svg>
+    <style>
+      /* 3D Tilt Card Base Styles */
+      .tilt-card-wrapper {
+        position: relative;
+        border-radius: 20px;
+        padding: 1px; /* Holds border gradient */
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform 0.15s ease-out;
+        will-change: transform;
+      }
+
+      .tilt-card-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: radial-gradient(
+          350px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+          rgba(56, 189, 248, 0.18),
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .tilt-card-inner {
+        position: relative;
+        background: rgba(18, 22, 34, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 19px;
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+        transform-style: preserve-3d;
+      }
+
+      .tilt-card-inner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          400px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+          rgba(255, 255, 255, 0.05),
+          transparent 65%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2;
+        transform: translateZ(35px);
+        transform-style: preserve-3d;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-bg-neutral dark:bg-dark-bg text-text-primary dark:text-slate-50 antialiased min-h-screen flex flex-col selection:bg-accent-blue selection:text-white transition-colors duration-200"
+  >
+    <!-- Micro-Texture Overlay (SVG Noise) -->
+    <div
+      class="pointer-events-none fixed inset-0 z-50 opacity-[0.035] mix-blend-screen"
+      style="
+        background-image: url(&quot;data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='noise'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23noise)'/></svg>&quot;);
+      "
+    ></div>
+
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-accent-teal text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase"
+            >Zero Risk</span
+          >
+          <span
+            >We build your complete custom website first. Pay only if you love
+            it.</span
+          >
         </div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-display font-extrabold text-lg text-primary-dark dark:text-slate-50 tracking-tight">Web Harbor</span>
-          <span class="text-[11px] font-bold text-accent-blue dark:text-blue-400 tracking-wider uppercase">Solutions</span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary Navigation">
-        <a href="../index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Home</a>
-        <a href="../how-it-works/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">How It Works</a>
-        <a href="../services/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Services</a>
-        <a href="../pricing/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Pricing</a>
-        <a href="../portfolio/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Portfolio</a>
-        <a href="../about/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">About Us</a>
-      </nav>
-
-      <!-- Desktop Actions: Theme Toggle & CTA -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-border-light dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
-          <svg class="sun-icon w-5 h-5 hidden dark:block text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
-          </svg>
-          <svg class="moon-icon w-5 h-5 block dark:hidden text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-          </svg>
-        </button>
-
-        <a href="../contact/index.html" class="hidden md:inline-flex bg-accent-blue hover:bg-accent-blue-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm items-center gap-1.5">
-          <span>Claim Free Demo</span>
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-
-        <!-- Mobile Hamburger Button -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md border border-border-light dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Toggle navigation" aria-expanded="false">
-          <svg id="menu-icon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-border-light dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3">
-      <a href="../index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Home</a>
-      <a href="../how-it-works/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">How It Works</a>
-      <a href="../services/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Services</a>
-      <a href="../pricing/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Pricing</a>
-      <a href="../portfolio/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Portfolio</a>
-      <a href="../about/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">About Us</a>
-      <a href="../contact/index.html" class="block w-full text-center bg-accent-blue text-white font-semibold py-2.5 rounded-lg shadow-sm mt-2">Claim Free Demo Website</a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="flex-grow py-16 md:py-24">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center max-w-2xl mx-auto mb-14">
-        <span class="inline-flex items-center gap-1.5 bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-accent-teal dark:text-teal-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3">
-          48-Hour Turnaround
-        </span>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-primary-dark dark:text-slate-50 tracking-tight mb-4">
-          Request Your Free Custom Website Demo
-        </h1>
-        <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-          Tell us about your business. Abdul and Jason will research your market, craft a custom prototype, and send you a private live link within 48 business hours.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-        <!-- Form Column (7 cols) -->
-        <div class="lg:col-span-7 bg-white dark:bg-slate-800 p-8 sm:p-10 rounded-3xl border border-border-light dark:border-slate-700 shadow-md">
-          <div id="form-container">
-            <form id="demo-request-form" class="space-y-5" onsubmit="event.preventDefault(); document.getElementById('form-container').classList.add('hidden'); document.getElementById('form-success').classList.remove('hidden');">
-              <div>
-                <label for="business-name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Business Name <span class="text-red-500">*</span></label>
-                <input id="business-name" type="text" required placeholder="e.g. Apex Plumbing &amp; Drain" class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="business-trade" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Trade / Category <span class="text-red-500">*</span></label>
-                  <select id="business-trade" required class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-                    <option value="" disabled selected class="dark:bg-slate-900">Select Trade</option>
-                    <option value="Plumbing" class="dark:bg-slate-900">Plumbing</option>
-                    <option value="HVAC" class="dark:bg-slate-900">HVAC &amp; Climate</option>
-                    <option value="Restaurant" class="dark:bg-slate-900">Restaurant / Bakery / Cafe</option>
-                    <option value="Healthcare" class="dark:bg-slate-900">Dental / Chiropractic / Clinic</option>
-                    <option value="Contractor" class="dark:bg-slate-900">Roofing / General Contractor</option>
-                    <option value="Other" class="dark:bg-slate-900">Other Local Service</option>
-                  </select>
-                </div>
-                <div>
-                  <label for="business-city" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">City &amp; State / Region <span class="text-red-500">*</span></label>
-                  <input id="business-city" type="text" required placeholder="e.g. Denver, CO" class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-                </div>
-              </div>
-
-              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label for="contact-name" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Your Name <span class="text-red-500">*</span></label>
-                  <input id="contact-name" type="text" required placeholder="e.g. John Miller" class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-                </div>
-                <div>
-                  <label for="contact-email" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Email Address <span class="text-red-500">*</span></label>
-                  <input id="contact-email" type="email" required placeholder="john@apexplumbing.com" class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-                </div>
-              </div>
-
-              <div>
-                <label for="contact-phone" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Phone Number <span class="text-slate-400 font-normal">(Optional — for SMS/WhatsApp preview link)</span></label>
-                <input id="contact-phone" type="tel" placeholder="(555) 000-0000" class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-              </div>
-
-              <div>
-                <label for="existing-site" class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2">Existing Website URL <span class="text-slate-400 font-normal">(Leave blank if you don't have one)</span></label>
-                <input id="existing-site" type="url" placeholder="https://oldwebsite.com" class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500">
-              </div>
-
-              <div class="pt-2">
-                <button type="submit" class="w-full bg-accent-blue hover:bg-accent-blue-hover text-white font-extrabold text-base py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
-                  <span>Build My Free Custom Demo</span>
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-                </button>
-              </div>
-
-              <div class="text-center text-xs text-slate-500 dark:text-slate-400 pt-1">
-                100% Free. No credit card required. Prototype ready within 48 business hours.
-              </div>
-            </form>
-          </div>
-
-          <!-- Success Message Feedback State -->
-          <div id="form-success" class="hidden py-12 text-center space-y-4">
-            <div class="w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-950/60 text-accent-teal dark:text-teal-400 flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3 class="text-2xl font-bold text-primary-dark dark:text-slate-50">Demo Request Received!</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm max-w-md mx-auto leading-relaxed">
-              Thank you! Abdul and Jason have received your business details and are already reviewing your local market. We will email your private staging link within 48 business hours.
-            </p>
-            <div class="pt-4">
-              <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-bold text-accent-blue dark:text-blue-400 hover:text-accent-blue-hover transition">
-                <span>&larr; Return to Home</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Direct Contact Column (5 cols) -->
-        <div class="lg:col-span-5 space-y-8">
-          <div class="bg-white dark:bg-slate-800 p-8 rounded-3xl border border-border-light dark:border-slate-700 shadow-xs space-y-6">
-            <h3 class="text-xl font-bold text-primary-dark dark:text-slate-50">Direct Founder Contact</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              You will never speak with an overseas call center or junior account manager. Every inquiry is personally reviewed by our co-founders.
-            </p>
-
-            <div class="space-y-4 text-sm">
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-accent-blue dark:text-blue-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <div>
-                  <strong class="block text-primary-dark dark:text-slate-50">Founders</strong>
-                  <span class="text-slate-600 dark:text-slate-400">Abdul Mateen &amp; Jason Gill</span>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-teal-50 dark:bg-teal-950/60 text-accent-teal dark:text-teal-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                </div>
-                <div>
-                  <strong class="block text-primary-dark dark:text-slate-50">Official Email</strong>
-                  <a href="mailto:support@webharborsolutions.com" class="text-accent-blue dark:text-blue-400 hover:underline">support@webharborsolutions.com</a>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                </div>
-                <div>
-                  <strong class="block text-primary-dark dark:text-slate-50">Operating Hours</strong>
-                  <span class="text-slate-600 dark:text-slate-400">Monday – Friday: 9:00 AM – 6:00 PM EST</span>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-lg bg-teal-50 dark:bg-teal-950/60 text-accent-teal dark:text-teal-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <div>
-                  <strong class="block text-primary-dark dark:text-slate-50">Guaranteed Response</strong>
-                  <span class="text-slate-600 dark:text-slate-400">We respond to every client within 12 business hours.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-6 rounded-3xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
-            <h4 class="font-bold text-primary-dark dark:text-slate-50 text-sm mb-1">Our Zero-Risk Promise</h4>
-            <p class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed">
-              If the custom prototype we build does not immediately impress you, simply decline it. We will never invoice you, follow up aggressively, or sell your contact information.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- Shared Global Footer -->
-  <footer class="bg-primary-dark dark:bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <div class="space-y-4 md:col-span-1">
-          <a href="../index.html" class="flex items-center gap-2.5 text-white font-display font-bold text-lg">
-            <div class="w-8 h-8 rounded bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
-            </div>
-            <span>Web Harbor</span>
+        <div class="flex items-center gap-4 text-slate-300">
+          <a
+            href="mailto:contact@webharborsolutions.com"
+            class="hover:text-white flex items-center gap-1 transition"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            contact@webharborsolutions.com
           </a>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            We build custom, high-converting websites for local service businesses before you pay a dime. Fast, reliable, and zero upfront risk.
+        </div>
+      </div>
+    </div>
+
+    <!-- Shared Global Navigation Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-border-light dark:border-dark-border transition shadow-sm"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3"
+      >
+        <a
+          href="../index.html"
+          class="flex items-center gap-3 group"
+          aria-label="Web Harbor Solutions Home"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white shadow-md group-hover:scale-105 transition"
+          >
+            <svg
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="5" r="3" />
+              <line x1="12" y1="22" x2="12" y2="8" />
+              <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
+            </svg>
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span
+              class="font-display font-extrabold text-lg text-primary-dark dark:text-slate-50 tracking-tight"
+              >Web Harbor</span
+            >
+            <span
+              class="text-[11px] font-bold text-accent-blue dark:text-blue-400 tracking-wider uppercase"
+              >Solutions</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav
+          class="hidden md:flex items-center gap-6"
+          aria-label="Primary Navigation"
+        >
+          <a
+            href="../index.html"
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            >Home</a
+          >
+          <a
+            href="../how-it-works/index.html"
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            >How It Works</a
+          >
+          <a
+            href="../services/index.html"
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            >Services</a
+          >
+          <a
+            href="../pricing/index.html"
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            >Pricing</a
+          >
+          <a
+            href="../portfolio/index.html"
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            >Portfolio</a
+          >
+          <a
+            href="../about/index.html"
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            >About Us</a
+          >
+        </nav>
+
+        <!-- Desktop Actions: Theme Toggle & CTA -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Theme Toggle Button -->
+          <button
+            type="button"
+            class="theme-toggle-btn p-2 rounded-lg border border-border-light dark:border-dark-border bg-slate-50 dark:bg-dark-surface text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+            aria-label="Toggle Dark and Light Mode"
+            title="Toggle theme"
+          >
+            <svg
+              class="sun-icon w-5 h-5 hidden dark:block text-amber-400"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2" />
+              <path d="M12 20v2" />
+              <path d="m4.93 4.93 1.41 1.41" />
+              <path d="m17.66 17.66 1.41 1.41" />
+              <path d="M2 12h2" />
+              <path d="M20 12h2" />
+              <path d="m6.34 17.66-1.41 1.41" />
+              <path d="m19.07 4.93-1.41 1.41" />
+            </svg>
+            <svg
+              class="moon-icon w-5 h-5 block dark:hidden text-slate-700"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+            </svg>
+          </button>
+
+          <a
+            href="../contact/index.html"
+            class="hidden md:inline-flex bg-accent-blue hover:bg-accent-blue-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm items-center gap-1.5"
+          >
+            <span>Claim Free Demo</span>
+            <svg
+              class="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            class="md:hidden p-2 rounded-md border border-border-light dark:border-dark-border text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <svg
+              id="menu-icon"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12" />
+              <line x1="4" x2="20" y1="6" y2="6" />
+              <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+            <svg
+              id="close-icon"
+              class="w-6 h-6 hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M18 6 6 18" />
+              <path d="m6 6 12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Drawer -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-border-light dark:border-dark-border bg-white dark:bg-dark-bg px-4 pt-3 pb-6 space-y-3"
+      >
+        <a
+          href="../index.html"
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          >Home</a
+        >
+        <a
+          href="../how-it-works/index.html"
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          >How It Works</a
+        >
+        <a
+          href="../services/index.html"
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          >Services</a
+        >
+        <a
+          href="../pricing/index.html"
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          >Pricing</a
+        >
+        <a
+          href="../portfolio/index.html"
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          >Portfolio</a
+        >
+        <a
+          href="../about/index.html"
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          >About Us</a
+        >
+        <a
+          href="../contact/index.html"
+          class="block w-full text-center bg-accent-blue text-white font-semibold py-2.5 rounded-lg shadow-sm mt-2"
+          >Claim Free Demo Website</a
+        >
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow py-16 md:py-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <span
+            class="inline-flex items-center gap-1.5 bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-accent-teal dark:text-teal-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-3"
+          >
+            48-Hour Turnaround
+          </span>
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold text-primary-dark dark:text-slate-50 tracking-tight mb-4 overflow-hidden"
+          >
+            <span class="reveal-text block">
+              Request Your Free Custom Website Demo
+            </span>
+          </h1>
+          <p
+            class="text-base sm:text-lg text-slate-600 dark:text-slate-400 leading-relaxed"
+          >
+            Tell us about your business. Abdul and Jason will research your
+            market, craft a custom prototype, and send you a private live link
+            within 48 business hours.
           </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">US LLC &amp; SECP Compliant</span>
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">Cloudflare Edge Hosted</span>
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">100% Free Spec Demo</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Form Column (7 cols) -->
+          <div
+            class="lg:col-span-7 bg-white dark:bg-dark-surface p-8 sm:p-10 rounded-3xl border border-border-light dark:border-dark-border shadow-md"
+          >
+            <div id="form-container">
+              <form
+                id="demo-request-form"
+                class="space-y-5"
+                onsubmit="
+                  event.preventDefault();
+                  document
+                    .getElementById('form-container')
+                    .classList.add('hidden');
+                  document
+                    .getElementById('form-success')
+                    .classList.remove('hidden');
+                "
+              >
+                <div>
+                  <label
+                    for="business-name"
+                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                    >Business Name <span class="text-red-500">*</span></label
+                  >
+                  <input
+                    id="business-name"
+                    type="text"
+                    required
+                    placeholder="e.g. Apex Plumbing &amp; Drain"
+                    class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                  />
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="business-trade"
+                      class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                      >Trade / Category
+                      <span class="text-red-500">*</span></label
+                    >
+                    <select
+                      id="business-trade"
+                      required
+                      class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                    >
+                      <option
+                        value=""
+                        disabled
+                        selected
+                        class="dark:bg-dark-bg"
+                      >
+                        Select Trade
+                      </option>
+                      <option value="Plumbing" class="dark:bg-dark-bg">
+                        Plumbing
+                      </option>
+                      <option value="HVAC" class="dark:bg-dark-bg">
+                        HVAC &amp; Climate
+                      </option>
+                      <option value="Restaurant" class="dark:bg-dark-bg">
+                        Restaurant / Bakery / Cafe
+                      </option>
+                      <option value="Healthcare" class="dark:bg-dark-bg">
+                        Dental / Chiropractic / Clinic
+                      </option>
+                      <option value="Contractor" class="dark:bg-dark-bg">
+                        Roofing / General Contractor
+                      </option>
+                      <option value="Other" class="dark:bg-dark-bg">
+                        Other Local Service
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="business-city"
+                      class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                      >City &amp; State / Region
+                      <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      id="business-city"
+                      type="text"
+                      required
+                      placeholder="e.g. Denver, CO"
+                      class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="contact-name"
+                      class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                      >Your Name <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      id="contact-name"
+                      type="text"
+                      required
+                      placeholder="e.g. John Miller"
+                      class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="contact-email"
+                      class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                      >Email Address <span class="text-red-500">*</span></label
+                    >
+                    <input
+                      id="contact-email"
+                      type="email"
+                      required
+                      placeholder="john@apexplumbing.com"
+                      class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="contact-phone"
+                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                    >Phone Number
+                    <span class="text-slate-400 font-normal"
+                      >(Optional — for SMS/WhatsApp preview link)</span
+                    ></label
+                  >
+                  <input
+                    id="contact-phone"
+                    type="tel"
+                    placeholder="(555) 000-0000"
+                    class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="existing-site"
+                    class="block text-xs font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider mb-2"
+                    >Existing Website URL
+                    <span class="text-slate-400 font-normal"
+                      >(Leave blank if you don't have one)</span
+                    ></label
+                  >
+                  <input
+                    id="existing-site"
+                    type="url"
+                    placeholder="https://oldwebsite.com"
+                    class="w-full px-4 py-3 rounded-xl border border-border-light dark:border-dark-border bg-white dark:bg-dark-bg text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 text-sm focus:outline-none focus:border-accent-blue dark:focus:border-blue-500"
+                  />
+                </div>
+
+                <div class="pt-2">
+                  <button
+                    type="submit"
+                    class="w-full bg-accent-blue hover:bg-accent-blue-hover text-white font-extrabold text-base py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2"
+                  >
+                    <span>Build My Free Custom Demo</span>
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M5 12h14" />
+                      <path d="m12 5 7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  class="text-center text-xs text-slate-500 dark:text-slate-400 pt-1"
+                >
+                  100% Free. No credit card required. Prototype ready within 48
+                  business hours.
+                </div>
+              </form>
+            </div>
+
+            <!-- Success Message Feedback State -->
+            <div id="form-success" class="hidden py-12 text-center space-y-4">
+              <div
+                class="w-16 h-16 rounded-full bg-teal-100 dark:bg-teal-950/60 text-accent-teal dark:text-teal-400 flex items-center justify-center mx-auto mb-4"
+              >
+                <svg
+                  class="w-8 h-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
+              <h3
+                class="text-2xl font-bold text-primary-dark dark:text-slate-50"
+              >
+                Demo Request Received!
+              </h3>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm max-w-md mx-auto leading-relaxed"
+              >
+                Thank you! Abdul and Jason have received your business details
+                and are already reviewing your local market. We will email your
+                private staging link within 48 business hours.
+              </p>
+              <div class="pt-4">
+                <a
+                  href="../index.html"
+                  class="inline-flex items-center gap-2 text-sm font-bold text-accent-blue dark:text-blue-400 hover:text-accent-blue-hover transition"
+                >
+                  <span>&larr; Return to Home</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Contact Column (5 cols) -->
+          <div class="lg:col-span-5 space-y-8">
+            <div
+              class="bg-white dark:bg-dark-surface p-8 rounded-3xl border border-border-light dark:border-dark-border shadow-xs space-y-6"
+            >
+              <h3
+                class="text-xl font-bold text-primary-dark dark:text-slate-50"
+              >
+                Direct Founder Contact
+              </h3>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+              >
+                You will never speak with an overseas call center or junior
+                account manager. Every inquiry is personally reviewed by our
+                co-founders.
+              </p>
+
+              <div class="space-y-4 text-sm">
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-accent-blue dark:text-blue-400 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                      <circle cx="9" cy="7" r="4" />
+                      <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                      <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong class="block text-primary-dark dark:text-slate-50"
+                      >Founders</strong
+                    >
+                    <span class="text-slate-600 dark:text-slate-400"
+                      >Abdul Mateen &amp; Jason Gill</span
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-teal-50 dark:bg-teal-950/60 text-accent-teal dark:text-teal-400 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect width="20" height="16" x="2" y="4" rx="2" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong class="block text-primary-dark dark:text-slate-50"
+                      >Official Email</strong
+                    >
+                    <a
+                      href="mailto:support@webharborsolutions.com"
+                      class="text-accent-blue dark:text-blue-400 hover:underline"
+                      >support@webharborsolutions.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong class="block text-primary-dark dark:text-slate-50"
+                      >Operating Hours</strong
+                    >
+                    <span class="text-slate-600 dark:text-slate-400"
+                      >Monday – Friday: 9:00 AM – 6:00 PM EST</span
+                    >
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3.5">
+                  <div
+                    class="w-9 h-9 rounded-lg bg-teal-50 dark:bg-teal-950/60 text-accent-teal dark:text-teal-400 flex items-center justify-center flex-shrink-0 mt-0.5"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong class="block text-primary-dark dark:text-slate-50"
+                      >Guaranteed Response</strong
+                    >
+                    <span class="text-slate-600 dark:text-slate-400"
+                      >We respond to every client within 12 business
+                      hours.</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="p-6 rounded-3xl bg-blue-50/70 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800"
+            >
+              <h4
+                class="font-bold text-primary-dark dark:text-slate-50 text-sm mb-1"
+              >
+                Our Zero-Risk Promise
+              </h4>
+              <p
+                class="text-slate-600 dark:text-slate-400 text-xs leading-relaxed"
+              >
+                If the custom prototype we build does not immediately impress
+                you, simply decline it. We will never invoice you, follow up
+                aggressively, or sell your contact information.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Shared Global Footer -->
+    <footer
+      class="bg-primary-dark dark:bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-800"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          <div class="space-y-4 md:col-span-1">
+            <a
+              href="../index.html"
+              class="flex items-center gap-2.5 text-white font-display font-bold text-lg"
+            >
+              <div
+                class="w-8 h-8 rounded bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white"
+              >
+                <svg
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <circle cx="12" cy="5" r="3" />
+                  <line x1="12" y1="22" x2="12" y2="8" />
+                  <path d="M5 12H2a10 10 0 0 0 20 0h-3" />
+                </svg>
+              </div>
+              <span>Web Harbor</span>
+            </a>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              We build custom, high-converting websites for local service
+              businesses before you pay a dime. Fast, reliable, and zero upfront
+              risk.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >US LLC &amp; SECP Compliant</span
+              >
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >Cloudflare Edge Hosted</span
+              >
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >100% Free Spec Demo</span
+              >
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Navigation
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a href="../index.html" class="hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../how-it-works/index.html"
+                  class="hover:text-white transition"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../services/index.html"
+                  class="hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../pricing/index.html"
+                  class="hover:text-white transition"
+                  >Pricing &amp; Plans</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../portfolio/index.html"
+                  class="hover:text-white transition"
+                  >Live Portfolio</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../about/index.html"
+                  class="hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../contact/index.html"
+                  class="text-white font-semibold transition"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Legal &amp; Compliance
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a
+                  href="../privacy/index.html"
+                  class="hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../terms/index.html"
+                  class="hover:text-white transition"
+                  >Terms of Service &amp; SLA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="../liability/index.html"
+                  class="hover:text-white transition"
+                  >Client Content &amp; Liability</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Founders &amp; Contact
+            </h3>
+            <p class="text-xs text-slate-400 mb-2">
+              <strong class="text-white">Founders:</strong> Abdul Mateen &amp;
+              Jason Gill
+            </p>
+            <p class="text-xs text-slate-400 mb-2">
+              <strong class="text-white">Email:</strong>
+              <a
+                href="mailto:contact@webharborsolutions.com"
+                class="hover:text-white transition"
+                >contact@webharborsolutions.com</a
+              >
+            </p>
+            <p class="text-xs text-slate-400">
+              <strong class="text-white">Guaranteed Response:</strong> Within 12
+              business hours
+            </p>
           </div>
         </div>
 
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Navigation</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="../index.html" class="hover:text-white transition">Home</a></li>
-            <li><a href="../how-it-works/index.html" class="hover:text-white transition">How It Works</a></li>
-            <li><a href="../services/index.html" class="hover:text-white transition">Services</a></li>
-            <li><a href="../pricing/index.html" class="hover:text-white transition">Pricing &amp; Plans</a></li>
-            <li><a href="../portfolio/index.html" class="hover:text-white transition">Live Portfolio</a></li>
-            <li><a href="../about/index.html" class="hover:text-white transition">About Us</a></li>
-            <li><a href="../contact/index.html" class="text-white font-semibold transition">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Legal &amp; Compliance</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="../privacy/index.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="../terms/index.html" class="hover:text-white transition">Terms of Service &amp; SLA</a></li>
-            <li><a href="../liability/index.html" class="hover:text-white transition">Client Content &amp; Liability</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Founders &amp; Contact</h3>
-          <p class="text-xs text-slate-400 mb-2"><strong class="text-white">Founders:</strong> Abdul Mateen &amp; Jason Gill</p>
-          <p class="text-xs text-slate-400 mb-2"><strong class="text-white">Email:</strong> <a href="mailto:contact@webharborsolutions.com" class="hover:text-white transition">contact@webharborsolutions.com</a></p>
-          <p class="text-xs text-slate-400"><strong class="text-white">Guaranteed Response:</strong> Within 12 business hours</p>
+        <div
+          class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500"
+        >
+          <p>&copy; 2026 Web Harbor Solutions. All rights reserved.</p>
+          <p>
+            Serving small businesses across the US, UK, Canada, and Australia.
+          </p>
         </div>
       </div>
+    </footer>
 
-      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p>&copy; 2026 Web Harbor Solutions. All rights reserved.</p>
-        <p>Serving small businesses across the US, UK, Canada, and Australia.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Theme Toggle
-    function initThemeToggle() {
-      const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-      toggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const isDark = document.documentElement.classList.toggle('dark');
-          try {
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          } catch (e) {}
+    <script>
+      // Theme Toggle
+      function initThemeToggle() {
+        const toggleBtns = document.querySelectorAll(".theme-toggle-btn");
+        toggleBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const isDark = document.documentElement.classList.toggle("dark");
+            try {
+              localStorage.setItem("theme", isDark ? "dark" : "light");
+            } catch (e) {}
+          });
         });
-      });
-    }
-    initThemeToggle();
+      }
+      initThemeToggle();
 
-    // Mobile navigation toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
+      // Mobile navigation toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
 
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        const isOpen = !menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        menuIcon.classList.toggle('hidden', !isOpen);
-        closeIcon.classList.toggle('hidden', isOpen);
-        btn.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
-  </script>
-</body>
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const isOpen = !menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          menuIcon.classList.toggle("hidden", !isOpen);
+          closeIcon.classList.toggle("hidden", isOpen);
+          btn.setAttribute("aria-expanded", String(!isOpen));
+        });
+      }
+    </script>
+
+    <script src="../js/main.js"></script>
+  </body>
 </html>

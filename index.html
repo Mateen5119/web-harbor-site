@@ -1,567 +1,1374 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Harbor Solutions | High-Converting Websites for Local Businesses</title>
-  <meta name="description" content="We build your custom business website before you pay a dime. Fast, mobile-first websites with hosting and maintenance for just $99/month.">
-  <link rel="canonical" href="https://webharborsolutions.com/">
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E">
-
-  <!-- Prevent Theme Flash (FOUC) -->
-  <script>
-    (function() {
-      try {
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add('dark');
-        } else {
-          document.documentElement.classList.remove('dark');
-        }
-      } catch (e) {}
-    })();
-  </script>
-
-  <!-- Tailwind CSS & Google Fonts -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            'primary-dark': '#0f172a',
-            'accent-blue': '#2563eb',
-            'accent-blue-hover': '#1d4ed8',
-            'accent-teal': '#0d9488',
-            'accent-teal-hover': '#0f766e',
-            'bg-neutral': '#f8fafc',
-            'surface-white': '#ffffff',
-            'text-primary': '#1e293b',
-            'text-muted': '#64748b',
-            'border-light': '#e2e8f0',
-            // Dark Mode Slate Tokens
-            'dark-bg': '#0f172a',
-            'dark-card': '#1e293b',
-            'dark-border': '#334155',
-            'dark-text': '#f8fafc',
-            'dark-muted': '#94a3b8',
-            'dark-blue': '#3b82f6',
-            'dark-teal': '#14b8a6',
-          },
-          fontFamily: {
-            display: ['"Plus Jakarta Sans"', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>
+      Web Harbor Solutions | High-Converting Websites for Local Businesses
+    </title>
+    <meta
+      content="We build your custom business website before you pay a dime. Fast, mobile-first websites with hosting and maintenance for just $99/month."
+      name="description"
+    />
+    <link href="https://webharborsolutions.com/" rel="canonical" />
+    <link
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='5' r='3'/%3E%3Cline x1='12' y1='22' x2='12' y2='8'/%3E%3Cpath d='M5 12H2a10 10 0 0 0 20 0h-3'/%3E%3C/svg%3E"
+      rel="icon"
+    />
+    <!-- Prevent Theme Flash (FOUC) -->
+    <script>
+      (function () {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const prefersDark = window.matchMedia(
+            "(prefers-color-scheme: dark)",
+          ).matches;
+          if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
           }
+        } catch (e) {}
+      })();
+    </script>
+    <!-- Tailwind CSS & Google Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-dark": "#090A0F",
+              "accent-blue": "#38bdf8",
+              "accent-blue-hover": "#0284c7",
+              "accent-teal": "#6366f1",
+              "accent-teal-hover": "#4f46e5",
+              "bg-neutral": "#090A0F",
+              "surface-white": "#ffffff",
+              "text-primary": "#F3F4F6",
+              "text-muted": "#9CA3AF",
+              "border-light": "rgba(255, 255, 255, 0.08)",
+              // Dark Mode Slate Tokens
+              "dark-bg": "#090A0F",
+              "dark-card": "#1e293b",
+              "dark-border": "rgba(255, 255, 255, 0.08)",
+              "dark-text": "#f8fafc",
+              "dark-muted": "#94a3b8",
+              "dark-blue": "#3b82f6",
+              "dark-teal": "#14b8a6",
+            },
+            fontFamily: {
+              display: ['"Plus Jakarta Sans"', "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .dark body,
+      html.dark body {
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+    </style>
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://webharborsolutions.com/#organization",
+            "name": "Web Harbor Solutions",
+            "url": "https://webharborsolutions.com/",
+            "email": "contact@webharborsolutions.com",
+            "founders": [
+              { "@type": "Person", "name": "Abdul Mateen" },
+              { "@type": "Person", "name": "Jason Gill" }
+            ],
+            "description": "Digital web agency building custom websites for small service businesses in US, UK, Canada, and Australia."
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://webharborsolutions.com/#service",
+            "name": "Web Harbor Solutions",
+            "url": "https://webharborsolutions.com/",
+            "priceRange": "$99/mo",
+            "email": "contact@webharborsolutions.com",
+            "areaServed": [
+              "United States",
+              "United Kingdom",
+              "Canada",
+              "Australia"
+            ],
+            "description": "Custom business website design, edge hosting on Cloudflare, and monthly maintenance with zero upfront risk."
+          }
+        ]
+      }
+    </script>
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- Lenis -->
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <style>
+      /* 3D Tilt Card Base Styles */
+      .tilt-card-wrapper {
+        position: relative;
+        border-radius: 20px;
+        padding: 1px; /* Holds border gradient */
+        background: rgba(255, 255, 255, 0.08);
+        overflow: hidden;
+        transform-style: preserve-3d;
+        transition: transform 0.15s ease-out;
+        will-change: transform;
+      }
+
+      .tilt-card-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: inherit;
+        background: radial-gradient(
+          350px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+          rgba(56, 189, 248, 0.18),
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .tilt-card-inner {
+        position: relative;
+        background: rgba(18, 22, 34, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 19px;
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+        transform-style: preserve-3d;
+      }
+
+      .tilt-card-inner::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(
+          400px circle at var(--mouse-x, -200px) var(--mouse-y, -200px),
+          rgba(255, 255, 255, 0.05),
+          transparent 65%
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .card-content {
+        position: relative;
+        z-index: 2;
+        transform: translateZ(35px);
+        transform-style: preserve-3d;
+        height: 100%;
+      }
+    </style>
+    <!-- Three.js & GLTFLoader -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
         }
       }
-    }
-  </script>
-  <style>
-    body { font-family: 'Inter', sans-serif; background-color: #f8fafc; color: #1e293b; }
-    .dark body, html.dark body { background-color: #0f172a; color: #f8fafc; }
-    h1, h2, h3, h4, h5, h6 { font-family: 'Plus Jakarta Sans', sans-serif; }
-  </style>
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://webharborsolutions.com/#organization",
-        "name": "Web Harbor Solutions",
-        "url": "https://webharborsolutions.com/",
-        "email": "contact@webharborsolutions.com",
-        "founders": [
-          { "@type": "Person", "name": "Abdul Mateen" },
-          { "@type": "Person", "name": "Jason Gill" }
-        ],
-        "description": "Digital web agency building custom websites for small service businesses in US, UK, Canada, and Australia."
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://webharborsolutions.com/#service",
-        "name": "Web Harbor Solutions",
-        "url": "https://webharborsolutions.com/",
-        "priceRange": "$99/mo",
-        "email": "contact@webharborsolutions.com",
-        "areaServed": ["United States", "United Kingdom", "Canada", "Australia"],
-        "description": "Custom business website design, edge hosting on Cloudflare, and monthly maintenance with zero upfront risk."
-      }
-    ]
-  }
-  </script>
-</head>
-<body class="bg-bg-neutral dark:bg-slate-900 text-text-primary dark:text-slate-50 antialiased min-h-screen flex flex-col selection:bg-accent-blue selection:text-white transition-colors duration-200">
-
-  <!-- Top Announcement Bar -->
-  <div class="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-      <div class="flex items-center gap-2">
-        <span class="bg-accent-teal text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase">Zero Risk</span>
-        <span>We build your complete custom website first. Pay only if you love it.</span>
-      </div>
-      <div class="flex items-center gap-4 text-slate-300">
-        <a href="mailto:contact@webharborsolutions.com" class="hover:text-white flex items-center gap-1 transition">
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-          contact@webharborsolutions.com
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Shared Global Navigation Header -->
-  <header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-border-light dark:border-slate-800 transition shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3">
-      <!-- Brand Logo -->
-      <a href="./index.html" class="flex items-center gap-3 group" aria-label="Web Harbor Solutions Home">
-        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="5" r="3"/>
-            <line x1="12" y1="22" x2="12" y2="8"/>
-            <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
-          </svg>
+    </script>
+  </head>
+  <body
+    class="bg-bg-neutral dark:bg-dark-bg text-text-primary dark:text-slate-50 antialiased min-h-screen flex flex-col selection:bg-accent-blue selection:text-white transition-colors duration-200"
+  >
+    <!-- Micro-Texture Overlay (SVG Noise) -->
+    <div
+      class="pointer-events-none fixed inset-0 z-50 opacity-[0.035] mix-blend-screen"
+      style="
+        background-image: url(&quot;data:image/svg+xml;utf8,&lt;svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'&gt;&lt;filter id='noise'&gt;&lt;feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/&gt;&lt;/filter&gt;&lt;rect width='100%' height='100%' filter='url(%23noise)'/&gt;&lt;/svg&gt;&quot;);
+      "
+    ></div>
+    <!-- Top Announcement Bar -->
+    <div
+      class="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2"
+      >
+        <div class="flex items-center gap-2">
+          <span
+            class="bg-accent-teal text-white font-bold px-2 py-0.5 rounded text-[10px] tracking-wider uppercase"
+            >Zero Risk</span
+          >
+          <span
+            >We build your complete custom website first. Pay only if you love
+            it.</span
+          >
         </div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-display font-extrabold text-lg text-primary-dark dark:text-slate-50 tracking-tight">Web Harbor</span>
-          <span class="text-[11px] font-bold text-accent-blue dark:text-blue-400 tracking-wider uppercase">Solutions</span>
-        </div>
-      </a>
-
-      <!-- Desktop Nav -->
-      <nav class="hidden md:flex items-center gap-6" aria-label="Primary Navigation">
-        <a href="./index.html" class="text-sm font-semibold text-accent-blue dark:text-blue-400 transition">Home</a>
-        <a href="./how-it-works/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">How It Works</a>
-        <a href="./services/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Services</a>
-        <a href="./pricing/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Pricing</a>
-        <a href="./portfolio/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">Portfolio</a>
-        <a href="./about/index.html" class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition">About Us</a>
-      </nav>
-
-      <!-- Desktop Actions: Theme Toggle & CTA -->
-      <div class="flex items-center gap-2 sm:gap-3">
-        <!-- Theme Toggle Button -->
-        <button type="button" class="theme-toggle-btn p-2 rounded-lg border border-border-light dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition" aria-label="Toggle Dark and Light Mode" title="Toggle theme">
-          <svg class="sun-icon w-5 h-5 hidden dark:block text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
-          </svg>
-          <svg class="moon-icon w-5 h-5 block dark:hidden text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
-          </svg>
-        </button>
-
-        <a href="./contact/index.html" class="hidden md:inline-flex bg-accent-blue hover:bg-accent-blue-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm items-center gap-1.5">
-          <span>Claim Free Demo</span>
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-
-        <!-- Mobile Hamburger Button -->
-        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md border border-border-light dark:border-slate-700 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition" aria-label="Toggle navigation" aria-expanded="false">
-          <svg id="menu-icon" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg id="close-icon" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
-        </button>
-      </div>
-    </div>
-
-    <!-- Mobile Drawer -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-border-light dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-3">
-      <a href="./index.html" class="block font-semibold text-accent-blue dark:text-blue-400 py-1">Home</a>
-      <a href="./how-it-works/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">How It Works</a>
-      <a href="./services/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Services</a>
-      <a href="./pricing/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Pricing</a>
-      <a href="./portfolio/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">Portfolio</a>
-      <a href="./about/index.html" class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1">About Us</a>
-      <a href="./contact/index.html" class="block w-full text-center bg-accent-blue text-white font-semibold py-2.5 rounded-lg shadow-sm mt-2">Claim Free Demo Website</a>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="flex-grow">
-    <!-- 1. Hero Section -->
-    <section class="py-16 md:py-24 bg-gradient-to-b from-blue-50/60 via-slate-50 to-bg-neutral dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border-b border-border-light dark:border-slate-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <div class="inline-flex items-center gap-2 bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-accent-teal dark:text-teal-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-6 shadow-xs">
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          The Zero-Risk Web Agency
-        </div>
-
-        <h1 class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-primary-dark dark:text-slate-50 tracking-tight leading-tight md:leading-none mb-6">
-          See Your New Website Live Before You Pay a Single Dollar.
-        </h1>
-
-        <p class="text-base sm:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-          Most agencies demand $3,000 upfront for wireframes and empty promises. We build your complete, tailored website first. If you love it, we launch it. If you don't, you pay nothing.
-        </p>
-
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <a href="./contact/index.html" class="w-full sm:w-auto bg-accent-blue hover:bg-accent-blue-hover text-white text-base font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2">
-            <span>Claim Your Free Demo Website</span>
-            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <a href="./portfolio/index.html" class="w-full sm:w-auto bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 text-base font-semibold px-6 py-3.5 rounded-xl shadow-xs transition flex items-center justify-center">
-            Explore Live Demos
+        <div class="flex items-center gap-4 text-slate-300">
+          <a
+            class="hover:text-white flex items-center gap-1 transition"
+            href="mailto:contact@webharborsolutions.com"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+            contact@webharborsolutions.com
           </a>
         </div>
-
-        <div class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 pt-6 border-t border-slate-200 dark:border-slate-800">
-          <div class="flex items-center gap-1.5 font-medium">
-            <svg class="w-4 h-4 text-accent-teal dark:text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            5–7 Day Turnaround
+      </div>
+    </div>
+    <!-- Shared Global Navigation Header -->
+    <header
+      class="sticky top-0 z-50 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-border-light dark:border-dark-border transition shadow-sm"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between py-3"
+      >
+        <!-- Brand Logo -->
+        <a
+          aria-label="Web Harbor Solutions Home"
+          class="flex items-center gap-3 group"
+          href="./index.html"
+        >
+          <div
+            class="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white shadow-md group-hover:scale-105 transition"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.2"
+              viewbox="0 0 24 24"
+            >
+              <circle cx="12" cy="5" r="3"></circle>
+              <line x1="12" x2="12" y1="22" y2="8"></line>
+              <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+            </svg>
           </div>
-          <div class="flex items-center gap-1.5 font-medium">
-            <svg class="w-4 h-4 text-accent-teal dark:text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            No Long-Term Contracts
+          <div class="flex flex-col leading-tight">
+            <span
+              class="font-display font-extrabold text-lg text-primary-dark dark:text-slate-50 tracking-tight"
+              >Web Harbor</span
+            >
+            <span
+              class="text-[11px] font-bold text-accent-blue dark:text-blue-400 tracking-wider uppercase"
+              >Solutions</span
+            >
           </div>
-          <div class="flex items-center gap-1.5 font-medium">
-            <svg class="w-4 h-4 text-accent-teal dark:text-teal-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-            100% Free Spec Demo
-          </div>
+        </a>
+        <!-- Desktop Nav -->
+        <nav
+          aria-label="Primary Navigation"
+          class="hidden md:flex items-center gap-6"
+        >
+          <a
+            class="text-sm font-semibold text-accent-blue dark:text-blue-400 transition"
+            href="./index.html"
+            >Home</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="./how-it-works/index.html"
+            >How It Works</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="./services/index.html"
+            >Services</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="./pricing/index.html"
+            >Pricing</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="./portfolio/index.html"
+            >Portfolio</a
+          >
+          <a
+            class="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-accent-blue dark:hover:text-blue-400 transition"
+            href="./about/index.html"
+            >About Us</a
+          >
+        </nav>
+        <!-- Desktop Actions: Theme Toggle & CTA -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Theme Toggle Button -->
+          <button
+            aria-label="Toggle Dark and Light Mode"
+            class="theme-toggle-btn p-2 rounded-lg border border-border-light dark:border-dark-border bg-slate-50 dark:bg-dark-surface text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+            title="Toggle theme"
+            type="button"
+          >
+            <svg
+              class="sun-icon w-5 h-5 hidden dark:block text-amber-400"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+            <svg
+              class="moon-icon w-5 h-5 block dark:hidden text-slate-700"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+          </button>
+          <a
+            class="hidden md:inline-flex bg-accent-blue hover:bg-accent-blue-hover text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-sm items-center gap-1.5"
+            href="./contact/index.html"
+          >
+            <span>Claim Free Demo</span>
+            <svg
+              class="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+          <!-- Mobile Hamburger Button -->
+          <button
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="md:hidden p-2 rounded-md border border-border-light dark:border-dark-border text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition"
+            id="mobile-menu-btn"
+            type="button"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              id="menu-icon"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <svg
+              class="w-6 h-6 hidden"
+              fill="none"
+              id="close-icon"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M18 6 6 18"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
         </div>
       </div>
-    </section>
-
-    <!-- 2. The Problem with Traditional Web Agencies (Pain Point Grid) -->
-    <section class="py-16 md:py-20 bg-white dark:bg-slate-900/60">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mb-3">The Problem with Traditional Web Agencies</h2>
-          <p class="text-slate-600 dark:text-slate-400">Local business owners have been burned by outdated agency models for decades. Here is what we changed.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="p-6 rounded-2xl bg-bg-neutral dark:bg-slate-800 border border-border-light dark:border-slate-700 hover:border-red-200 dark:hover:border-red-900 transition shadow-xs">
-            <div class="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 flex items-center justify-center font-bold text-xl mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><circle cx="12" cy="12" r="10"/></svg>
-            </div>
-            <h3 class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2">Massive Upfront Risk</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Agencies charge $3,000 to $7,000 before writing a single line of code. You take 100% of the financial risk on empty wireframes.</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-bg-neutral dark:bg-slate-800 border border-border-light dark:border-slate-700 hover:border-amber-200 dark:hover:border-amber-900 transition shadow-xs">
-            <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xl mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-            </div>
-            <h3 class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2">Forgotten After Launch</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Once delivered, traditional agencies disappear. Need a menu update or phone number change? Expect a $150/hr bill and a two-week delay.</p>
-          </div>
-
-          <div class="p-6 rounded-2xl bg-bg-neutral dark:bg-slate-800 border border-border-light dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition shadow-xs">
-            <div class="w-12 h-12 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 flex items-center justify-center font-bold text-xl mb-4">
-              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>
-            </div>
-            <h3 class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2">Bloated &amp; Broken Code</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Clunky WordPress setups with 40 plugins that crash, take 8 seconds to load, and repel mobile customers before they ever make a call.</p>
-          </div>
-        </div>
+      <!-- Mobile Drawer -->
+      <div
+        class="hidden md:hidden border-t border-border-light dark:border-dark-border bg-white dark:bg-dark-bg px-4 pt-3 pb-6 space-y-3"
+        id="mobile-menu"
+      >
+        <a
+          class="block font-semibold text-accent-blue dark:text-blue-400 py-1"
+          href="./index.html"
+          >Home</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="./how-it-works/index.html"
+          >How It Works</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="./services/index.html"
+          >Services</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="./pricing/index.html"
+          >Pricing</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="./portfolio/index.html"
+          >Portfolio</a
+        >
+        <a
+          class="block font-semibold text-slate-700 dark:text-slate-200 hover:text-accent-blue dark:hover:text-blue-400 py-1"
+          href="./about/index.html"
+          >About Us</a
+        >
+        <a
+          class="block w-full text-center bg-accent-blue text-white font-semibold py-2.5 rounded-lg shadow-sm mt-2"
+          href="./contact/index.html"
+          >Claim Free Demo Website</a
+        >
       </div>
-    </section>
-
-    <!-- 3. The Web Harbor Advantage (Comparison Table) -->
-    <section class="py-16 md:py-20 bg-bg-neutral dark:bg-slate-900 border-y border-border-light dark:border-slate-800">
-      <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-accent-blue dark:text-blue-400 font-bold text-xs uppercase tracking-wider">The Comparison</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3">The Web Harbor Advantage</h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">See how our model compares directly to traditional agencies and DIY website builders.</p>
-        </div>
-
-        <div class="overflow-x-auto bg-white dark:bg-slate-800 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs">
-          <table class="w-full text-left text-sm border-collapse">
-            <thead>
-              <tr class="bg-slate-100/80 dark:bg-slate-900/80 border-b border-border-light dark:border-slate-700 text-slate-700 dark:text-slate-300 font-bold">
-                <th class="p-4 sm:p-5">Feature</th>
-                <th class="p-4 sm:p-5">Traditional Agency</th>
-                <th class="p-4 sm:p-5">DIY Builders (Wix/Squarespace)</th>
-                <th class="p-4 sm:p-5 bg-blue-50 dark:bg-blue-950/50 text-accent-blue dark:text-blue-400">Web Harbor Solutions</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-border-light dark:divide-slate-700">
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">Upfront Cost</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$3,000 – $10,000</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">Your personal time + $30/mo</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400">$100 Setup</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">See It Before Paying</td>
-                <td class="p-4 sm:p-5 text-red-600 dark:text-red-400">Never</td>
-                <td class="p-4 sm:p-5 text-red-600 dark:text-red-400">No</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400">Yes (100% Live Demo)</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">Monthly Maintenance</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">$150+/hour extra</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">You fix it yourself</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400">Included (3 Edits/mo)</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">Hosting &amp; Domain</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">Separate invoice ($25-$80/mo)</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">Included with limits</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400">Included at $0 extra</td>
-              </tr>
-              <tr>
-                <td class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200">Page Speed Score</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">40–70 (Bloated)</td>
-                <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">50–70</td>
-                <td class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400">95–100 (Edge Static)</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- 4. Interactive Feature: The Agency Cost vs. Web Harbor Calculator -->
-    <section class="py-16 md:py-20 bg-white dark:bg-slate-900/60">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-10">
-          <span class="text-accent-teal dark:text-teal-400 font-bold text-xs uppercase tracking-wider">ROI Calculator</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3">Agency Cost vs. Web Harbor Calculator</h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">Slide to test your typical agency estimate and see how much you keep in your business bank account.</p>
-        </div>
-
-        <div class="bg-bg-neutral dark:bg-slate-800 border border-border-light dark:border-slate-700 rounded-3xl p-6 sm:p-10 shadow-sm">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <!-- Inputs -->
-            <div class="space-y-6">
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="agency-quote" class="text-sm font-bold text-primary-dark dark:text-slate-200">Traditional Agency Quote:</label>
-                  <span id="agency-quote-val" class="font-bold text-accent-blue dark:text-blue-400 text-base">$4,000</span>
-                </div>
-                <input id="agency-quote" type="range" min="2000" max="8000" step="500" value="4000" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-accent-blue">
-                <div class="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 mt-1">
-                  <span>$2,000</span>
-                  <span>$5,000</span>
-                  <span>$8,000</span>
-                </div>
-              </div>
-
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label for="maint-hours" class="text-sm font-bold text-primary-dark dark:text-slate-200">Monthly Maintenance Hours Needed:</label>
-                  <span id="maint-hours-val" class="font-bold text-accent-blue dark:text-blue-400 text-base">2 hrs/mo ($200)</span>
-                </div>
-                <input id="maint-hours" type="range" min="1" max="3" step="1" value="2" class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-accent-blue">
-                <div class="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 mt-1">
-                  <span>1 hr ($100/mo)</span>
-                  <span>2 hrs ($200/mo)</span>
-                  <span>3 hrs ($300/mo)</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Results -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-border-light dark:border-slate-700 flex flex-col justify-between">
-              <div class="space-y-3">
-                <div class="flex justify-between text-sm text-slate-600 dark:text-slate-400">
-                  <span>Traditional 1st Year Cost:</span>
-                  <span id="trad-total" class="font-bold text-red-600 dark:text-red-400">$6,400</span>
-                </div>
-                <div class="flex justify-between text-sm text-slate-600 dark:text-slate-400">
-                  <span>Web Harbor 1st Year Cost:</span>
-                  <span class="font-bold text-primary-dark dark:text-slate-200">$100 setup + ($99 &times; 12) = $1,288</span>
-                </div>
-                <hr class="border-border-light dark:border-slate-800">
-              </div>
-
-              <div class="mt-4 p-4 rounded-xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-center">
-                <span class="block text-xs font-bold text-teal-800 dark:text-teal-300 uppercase tracking-wider">Your Year 1 Savings</span>
-                <span id="savings-val" class="block text-2xl sm:text-3xl font-black text-accent-teal dark:text-teal-400 mt-1">Save over $5,112</span>
-                <span class="block text-[11px] text-teal-700 dark:text-teal-300 mt-0.5">That's $5,112 kept directly in your business.</span>
-              </div>
-            </div>
+    </header>
+    <!-- Main Content -->
+    <main class="flex-grow">
+      <!-- 1. Hero Section -->
+      <section
+        class="py-16 md:py-24 bg-gradient-to-b from-blue-50/60 via-slate-50 to-bg-neutral dark:from-slate-900 dark:via-slate-900 dark:to-slate-950 border-b border-border-light dark:border-dark-border"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div
+            class="inline-flex items-center gap-2 bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-accent-teal dark:text-teal-400 text-xs font-bold uppercase tracking-wider px-3.5 py-1 rounded-full mb-6 shadow-xs"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2.5"
+              viewbox="0 0 24 24"
+            >
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            The Zero-Risk Web Agency
           </div>
-
-          <div class="text-center pt-2">
-            <a href="./contact/index.html" class="inline-flex items-center gap-2 bg-accent-blue hover:bg-accent-blue-hover text-white font-bold px-6 py-3 rounded-xl transition shadow-sm text-sm">
-              <span>Lock In Your $99/mo Plan Now</span>
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          <h1
+            class="text-3xl sm:text-5xl md:text-6xl font-extrabold text-primary-dark dark:text-slate-50 tracking-tight leading-tight md:leading-none mb-6 overflow-hidden"
+          >
+            <span class="reveal-text block">
+              See Your New Website Live Before You Pay a Single Dollar.
+            </span>
+          </h1>
+          <p
+            class="text-base sm:text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
+          >
+            Most agencies demand $3,000 upfront for wireframes and empty
+            promises. We build your complete, tailored website first. If you
+            love it, we launch it. If you don't, you pay nothing.
+          </p>
+          <div
+            class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+          >
+            <a
+              class="w-full sm:w-auto bg-accent-blue hover:bg-accent-blue-hover text-white text-base font-bold px-7 py-3.5 rounded-xl shadow-md hover:shadow-lg transition flex items-center justify-center gap-2"
+              href="./contact/index.html"
+            >
+              <span>Claim Your Free Demo Website</span>
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewbox="0 0 24 24"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </a>
+            <a
+              class="w-full sm:w-auto bg-white dark:bg-dark-surface hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-dark-border text-base font-semibold px-6 py-3.5 rounded-xl shadow-xs transition flex items-center justify-center"
+              href="./portfolio/index.html"
+            >
+              Explore Live Demos
             </a>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 5. Social Proof / How We Work (Three Columns) -->
-    <section class="py-16 md:py-20 bg-bg-neutral dark:bg-slate-900 border-t border-border-light dark:border-slate-800">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-accent-blue dark:text-blue-400 font-bold text-xs uppercase tracking-wider">The Process</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3">How We Work With You</h2>
-          <p class="text-slate-600 dark:text-slate-400 text-sm">No 15-page contracts. No endless pitch decks. Just results you can see on your phone.</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs relative">
-            <span class="w-8 h-8 rounded-full bg-accent-blue text-white font-bold text-sm flex items-center justify-center mb-4">1</span>
-            <h3 class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2">We Find &amp; Research</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We analyze your business, your local competitors, and your customer reviews to design a conversion structure specifically tuned for your trade.</p>
-          </div>
-
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs relative">
-            <span class="w-8 h-8 rounded-full bg-accent-teal text-white font-bold text-sm flex items-center justify-center mb-4">2</span>
-            <h3 class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2">We Build the Demo</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">We hand-code a fully working, mobile-responsive prototype on our private staging servers. You receive an active link to test yourself.</p>
-          </div>
-
-          <div class="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-border-light dark:border-slate-700 shadow-xs relative">
-            <span class="w-8 h-8 rounded-full bg-primary-dark dark:bg-slate-700 text-white font-bold text-sm flex items-center justify-center mb-4">3</span>
-            <h3 class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2">You Decide</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Love it? We point it to your custom domain for $99/mo. Don't like it? Walk away with zero obligation and zero cost. Zero risk.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 6. Call to Action Banner -->
-    <section class="py-16 md:py-20 bg-primary-dark dark:bg-slate-950 text-white relative overflow-hidden border-t border-slate-800">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
-        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4">
-          Ready to see what your business looks like with a modern website?
-        </h2>
-        <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
-          Give us your business name and city. Jason and Abdul will build and send you a live working demo link within 48 business hours.
-        </p>
-        <a href="./contact/index.html" class="inline-flex items-center gap-2 bg-accent-blue hover:bg-accent-blue-hover text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5">
-          <span>Request Your Free Custom Demo</span>
-          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <!-- Shared Global Footer -->
-  <footer class="bg-primary-dark dark:bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-800">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
-        <!-- Brand Info -->
-        <div class="space-y-4 md:col-span-1">
-          <a href="./index.html" class="flex items-center gap-2.5 text-white font-display font-bold text-lg">
-            <div class="w-8 h-8 rounded bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white">
-              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="5" r="3"/><line x1="12" y1="22" x2="12" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>
+          <div
+            class="flex flex-wrap items-center justify-center gap-6 text-xs sm:text-sm text-slate-500 dark:text-slate-400 pt-6 border-t border-slate-200 dark:border-dark-border"
+          >
+            <div class="flex items-center gap-1.5 font-medium">
+              <svg
+                class="w-4 h-4 text-accent-teal dark:text-teal-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewbox="0 0 24 24"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              5–7 Day Turnaround
             </div>
-            <span>Web Harbor</span>
-          </a>
-          <p class="text-slate-400 text-xs leading-relaxed">
-            We build custom, high-converting websites for local service businesses before you pay a dime. Fast, reliable, and zero upfront risk.
-          </p>
-          <div class="flex flex-wrap gap-1.5 pt-1">
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">US LLC &amp; SECP Compliant</span>
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">Cloudflare Edge Hosted</span>
-            <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700">100% Free Spec Demo</span>
+            <div class="flex items-center gap-1.5 font-medium">
+              <svg
+                class="w-4 h-4 text-accent-teal dark:text-teal-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewbox="0 0 24 24"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              No Long-Term Contracts
+            </div>
+            <div class="flex items-center gap-1.5 font-medium">
+              <svg
+                class="w-4 h-4 text-accent-teal dark:text-teal-400"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2.5"
+                viewbox="0 0 24 24"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              100% Free Spec Demo
+            </div>
+          </div>
+
+          <div
+            class="mt-12 relative w-full h-[300px] sm:h-[400px] overflow-hidden rounded-3xl flex items-center justify-center bg-dark-bg/50 backdrop-blur-sm border border-dark-border tilt-card-wrapper"
+            id="hero-3d-container"
+            style="padding: 1px"
+          >
+            <div
+              class="tilt-card-inner w-full h-full flex items-center justify-center relative z-10"
+              style="padding: 0"
+            >
+              <div
+                class="w-full h-full absolute inset-0"
+                id="hero-canvas"
+              ></div>
+              <div
+                class="absolute bottom-4 right-4 text-xs text-slate-500 font-mono z-20 pointer-events-none bg-dark-bg/80 px-2 py-1 rounded"
+              >
+                DRAG TO ROTATE
+              </div>
+            </div>
           </div>
         </div>
-
-        <!-- Quick Links -->
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Navigation</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="./index.html" class="hover:text-white transition">Home</a></li>
-            <li><a href="./how-it-works/index.html" class="hover:text-white transition">How It Works</a></li>
-            <li><a href="./services/index.html" class="hover:text-white transition">Services</a></li>
-            <li><a href="./pricing/index.html" class="hover:text-white transition">Pricing &amp; Plans</a></li>
-            <li><a href="./portfolio/index.html" class="hover:text-white transition">Live Portfolio</a></li>
-            <li><a href="./about/index.html" class="hover:text-white transition">About Us</a></li>
-            <li><a href="./contact/index.html" class="hover:text-white transition">Contact Us</a></li>
-          </ul>
+      </section>
+      <!-- 2. The Problem with Traditional Web Agencies (Pain Point Grid) -->
+      <section class="py-16 md:py-20 bg-white dark:bg-dark-bg/60">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block"
+                >The Problem with Traditional Web Agencies</span
+              >
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400">
+              Local business owners have been burned by outdated agency models
+              for decades. Here is what we changed.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div
+                class="tilt-card-inner p-6 border dark:hover:border-red-900 transition shadow-xs"
+              >
+                <div class="card-content">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-950/60 text-red-600 dark:text-red-400 flex items-center justify-center font-bold text-xl mb-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewbox="0 0 24 24"
+                    >
+                      <path d="M12 9v4"></path>
+                      <path d="M12 17h.01"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2"
+                  >
+                    Massive Upfront Risk
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Agencies charge $3,000 to $7,000 before writing a single
+                    line of code. You take 100% of the financial risk on empty
+                    wireframes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div
+                class="tilt-card-inner p-6 border dark:hover:border-amber-900 transition shadow-xs"
+              >
+                <div class="card-content">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center font-bold text-xl mb-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewbox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 14 14"></polyline>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2"
+                  >
+                    Forgotten After Launch
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Once delivered, traditional agencies disappear. Need a menu
+                    update or phone number change? Expect a $150/hr bill and a
+                    two-week delay.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div
+                class="tilt-card-inner p-6 border dark:hover:border-slate-600 transition shadow-xs"
+              >
+                <div class="card-content">
+                  <div
+                    class="w-12 h-12 rounded-xl bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 flex items-center justify-center font-bold text-xl mb-4"
+                  >
+                    <svg
+                      class="w-6 h-6"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewbox="0 0 24 24"
+                    >
+                      <path
+                        d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                      ></path>
+                      <line x1="12" x2="12" y1="9" y2="13"></line>
+                      <line x1="12" x2="12.01" y1="17" y2="17"></line>
+                    </svg>
+                  </div>
+                  <h3
+                    class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2"
+                  >
+                    Bloated &amp; Broken Code
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Clunky WordPress setups with 40 plugins that crash, take 8
+                    seconds to load, and repel mobile customers before they ever
+                    make a call.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Legal & Policies -->
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Legal &amp; Compliance</h3>
-          <ul class="space-y-2 text-xs">
-            <li><a href="./privacy/index.html" class="hover:text-white transition">Privacy Policy</a></li>
-            <li><a href="./terms/index.html" class="hover:text-white transition">Terms of Service &amp; SLA</a></li>
-            <li><a href="./liability/index.html" class="hover:text-white transition">Client Content &amp; Liability</a></li>
-          </ul>
+      </section>
+      <!-- 3. The Web Harbor Advantage (Comparison Table) -->
+      <section
+        class="py-16 md:py-20 bg-bg-neutral dark:bg-dark-bg border-y border-border-light dark:border-dark-border"
+      >
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+              class="text-accent-blue dark:text-blue-400 font-bold text-xs uppercase tracking-wider"
+              >The Comparison</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block">The Web Harbor Advantage</span>
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              See how our model compares directly to traditional agencies and
+              DIY website builders.
+            </p>
+          </div>
+          <div
+            class="overflow-x-auto bg-white dark:bg-dark-surface rounded-2xl border border-border-light dark:border-dark-border shadow-xs"
+          >
+            <table class="w-full text-left text-sm border-collapse">
+              <thead>
+                <tr
+                  class="bg-slate-100/80 dark:bg-dark-bg/80 border-b border-border-light dark:border-dark-border text-slate-700 dark:text-slate-300 font-bold"
+                >
+                  <th class="p-4 sm:p-5">Feature</th>
+                  <th class="p-4 sm:p-5">Traditional Agency</th>
+                  <th class="p-4 sm:p-5">DIY Builders (Wix/Squarespace)</th>
+                  <th
+                    class="p-4 sm:p-5 bg-blue-50 dark:bg-blue-950/50 text-accent-blue dark:text-blue-400"
+                  >
+                    Web Harbor Solutions
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-border-light dark:divide-slate-700">
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    Upfront Cost
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $3,000 – $10,000
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    Your personal time + $30/mo
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400"
+                  >
+                    $100 Setup
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    See It Before Paying
+                  </td>
+                  <td class="p-4 sm:p-5 text-red-600 dark:text-red-400">
+                    Never
+                  </td>
+                  <td class="p-4 sm:p-5 text-red-600 dark:text-red-400">No</td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400"
+                  >
+                    Yes (100% Live Demo)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    Monthly Maintenance
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    $150+/hour extra
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    You fix it yourself
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400"
+                  >
+                    Included (3 Edits/mo)
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    Hosting &amp; Domain
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    Separate invoice ($25-$80/mo)
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    Included with limits
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-blue dark:text-blue-400"
+                  >
+                    Included at $0 extra
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    class="p-4 sm:p-5 font-semibold text-slate-800 dark:text-slate-200"
+                  >
+                    Page Speed Score
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    40–70 (Bloated)
+                  </td>
+                  <td class="p-4 sm:p-5 text-slate-600 dark:text-slate-400">
+                    50–70
+                  </td>
+                  <td
+                    class="p-4 sm:p-5 bg-blue-50/50 dark:bg-blue-950/30 font-bold text-accent-teal dark:text-teal-400"
+                  >
+                    95–100 (Edge Static)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-
-        <!-- Founders & Contact -->
-        <div>
-          <h3 class="text-white font-semibold text-sm mb-3 font-display">Founders &amp; Contact</h3>
-          <p class="text-xs text-slate-400 mb-2"><strong class="text-white">Founders:</strong> Abdul Mateen &amp; Jason Gill</p>
-          <p class="text-xs text-slate-400 mb-2"><strong class="text-white">Email:</strong> <a href="mailto:contact@webharborsolutions.com" class="hover:text-white transition">contact@webharborsolutions.com</a></p>
-          <p class="text-xs text-slate-400"><strong class="text-white">Guaranteed Response:</strong> Within 12 business hours</p>
+      </section>
+      <!-- 4. Interactive Feature: The Agency Cost vs. Web Harbor Calculator -->
+      <section class="py-16 md:py-20 bg-white dark:bg-dark-bg/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span
+              class="text-accent-teal dark:text-teal-400 font-bold text-xs uppercase tracking-wider"
+              >ROI Calculator</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block"
+                >Agency Cost vs. Web Harbor Calculator</span
+              >
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              Slide to test your typical agency estimate and see how much you
+              keep in your business bank account.
+            </p>
+          </div>
+          <div class="tilt-card-wrapper mb-6 h-full">
+            <div class="tilt-card-inner border p-6 sm:p-10 shadow-sm">
+              <div class="card-content">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                  <!-- Inputs -->
+                  <div class="space-y-6">
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <label
+                          class="text-sm font-bold text-primary-dark dark:text-slate-200"
+                          for="agency-quote"
+                          >Traditional Agency Quote:</label
+                        >
+                        <span
+                          class="font-bold text-accent-blue dark:text-blue-400 text-base"
+                          id="agency-quote-val"
+                          >$4,000</span
+                        >
+                      </div>
+                      <input
+                        class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-accent-blue"
+                        id="agency-quote"
+                        max="8000"
+                        min="2000"
+                        step="500"
+                        type="range"
+                        value="4000"
+                      />
+                      <div
+                        class="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 mt-1"
+                      >
+                        <span>$2,000</span>
+                        <span>$5,000</span>
+                        <span>$8,000</span>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="flex justify-between items-center mb-2">
+                        <label
+                          class="text-sm font-bold text-primary-dark dark:text-slate-200"
+                          for="maint-hours"
+                          >Monthly Maintenance Hours Needed:</label
+                        >
+                        <span
+                          class="font-bold text-accent-blue dark:text-blue-400 text-base"
+                          id="maint-hours-val"
+                          >2 hrs/mo ($200)</span
+                        >
+                      </div>
+                      <input
+                        class="w-full h-2 bg-slate-200 dark:bg-slate-700 rounded-lg appearance-none cursor-pointer accent-accent-blue"
+                        id="maint-hours"
+                        max="3"
+                        min="1"
+                        step="1"
+                        type="range"
+                        value="2"
+                      />
+                      <div
+                        class="flex justify-between text-[11px] text-slate-400 dark:text-slate-500 mt-1"
+                      >
+                        <span>1 hr ($100/mo)</span>
+                        <span>2 hrs ($200/mo)</span>
+                        <span>3 hrs ($300/mo)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Results -->
+                  <div
+                    class="bg-white dark:bg-dark-bg p-6 rounded-2xl border border-border-light dark:border-dark-border flex flex-col justify-between"
+                  >
+                    <div class="space-y-3">
+                      <div
+                        class="flex justify-between text-sm text-slate-600 dark:text-slate-400"
+                      >
+                        <span>Traditional 1st Year Cost:</span>
+                        <span
+                          class="font-bold text-red-600 dark:text-red-400"
+                          id="trad-total"
+                          >$6,400</span
+                        >
+                      </div>
+                      <div
+                        class="flex justify-between text-sm text-slate-600 dark:text-slate-400"
+                      >
+                        <span>Web Harbor 1st Year Cost:</span>
+                        <span
+                          class="font-bold text-primary-dark dark:text-slate-200"
+                          >$100 setup + ($99 × 12) = $1,288</span
+                        >
+                      </div>
+                      <hr class="border-border-light dark:border-dark-border" />
+                    </div>
+                    <div
+                      class="mt-4 p-4 rounded-xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200 dark:border-teal-800 text-center"
+                    >
+                      <span
+                        class="block text-xs font-bold text-teal-800 dark:text-teal-300 uppercase tracking-wider"
+                        >Your Year 1 Savings</span
+                      >
+                      <span
+                        class="block text-2xl sm:text-3xl font-black text-accent-teal dark:text-teal-400 mt-1"
+                        id="savings-val"
+                        >Save over $5,112</span
+                      >
+                      <span
+                        class="block text-[11px] text-teal-700 dark:text-teal-300 mt-0.5"
+                        >That's $5,112 kept directly in your business.</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center pt-2">
+                  <a
+                    class="inline-flex items-center gap-2 bg-accent-blue hover:bg-accent-blue-hover text-white font-bold px-6 py-3 rounded-xl transition shadow-sm text-sm"
+                    href="./contact/index.html"
+                  >
+                    <span>Lock In Your $99/mo Plan Now</span>
+                    <svg
+                      class="w-4 h-4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      viewbox="0 0 24 24"
+                    >
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5. Social Proof / How We Work (Three Columns) -->
+      <section
+        class="py-16 md:py-20 bg-bg-neutral dark:bg-dark-bg border-t border-border-light dark:border-dark-border"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+              class="text-accent-blue dark:text-blue-400 font-bold text-xs uppercase tracking-wider"
+              >The Process</span
+            >
+            <h2
+              class="text-2xl sm:text-3xl font-extrabold text-primary-dark dark:text-slate-50 mt-1 mb-3 overflow-hidden"
+            >
+              <span class="reveal-text block">How We Work With You</span>
+            </h2>
+            <p class="text-slate-600 dark:text-slate-400 text-sm">
+              No 15-page contracts. No endless pitch decks. Just results you can
+              see on your phone.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs relative">
+                <div class="card-content">
+                  <span
+                    class="w-8 h-8 rounded-full bg-accent-blue text-white font-bold text-sm flex items-center justify-center mb-4"
+                    >1</span
+                  >
+                  <h3
+                    class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2"
+                  >
+                    We Find &amp; Research
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    We analyze your business, your local competitors, and your
+                    customer reviews to design a conversion structure
+                    specifically tuned for your trade.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs relative">
+                <div class="card-content">
+                  <span
+                    class="w-8 h-8 rounded-full bg-accent-teal text-white font-bold text-sm flex items-center justify-center mb-4"
+                    >2</span
+                  >
+                  <h3
+                    class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2"
+                  >
+                    We Build the Demo
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    We hand-code a fully working, mobile-responsive prototype on
+                    our private staging servers. You receive an active link to
+                    test yourself.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="tilt-card-wrapper mb-6 h-full">
+              <div class="tilt-card-inner p-6 border shadow-xs relative">
+                <div class="card-content">
+                  <span
+                    class="w-8 h-8 rounded-full bg-primary-dark dark:bg-slate-700 text-white font-bold text-sm flex items-center justify-center mb-4"
+                    >3</span
+                  >
+                  <h3
+                    class="text-lg font-bold text-primary-dark dark:text-slate-50 mb-2"
+                  >
+                    You Decide
+                  </h3>
+                  <p
+                    class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed"
+                  >
+                    Love it? We point it to your custom domain for $99/mo. Don't
+                    like it? Walk away with zero obligation and zero cost. Zero
+                    risk.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 6. Call to Action Banner -->
+      <section
+        class="py-16 md:py-20 bg-primary-dark dark:bg-slate-950 text-white relative overflow-hidden border-t border-slate-800"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <h2
+            class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-4 overflow-hidden"
+          >
+            <span class="reveal-text block">
+              Ready to see what your business looks like with a modern website?
+            </span>
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+            Give us your business name and city. Jason and Abdul will build and
+            send you a live working demo link within 48 business hours.
+          </p>
+          <a
+            class="inline-flex items-center gap-2 bg-accent-blue hover:bg-accent-blue-hover text-white font-bold text-base px-8 py-4 rounded-xl shadow-lg transition transform hover:-translate-y-0.5"
+            href="./contact/index.html"
+          >
+            <span>Request Your Free Custom Demo</span>
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewbox="0 0 24 24"
+            >
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+    <!-- Shared Global Footer -->
+    <footer
+      class="bg-primary-dark dark:bg-slate-950 text-slate-400 text-sm pt-16 pb-12 border-t border-slate-800"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+          <!-- Brand Info -->
+          <div class="space-y-4 md:col-span-1">
+            <a
+              class="flex items-center gap-2.5 text-white font-display font-bold text-lg"
+              href="./index.html"
+            >
+              <div
+                class="w-8 h-8 rounded bg-gradient-to-br from-accent-blue to-accent-teal flex items-center justify-center text-white"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  viewbox="0 0 24 24"
+                >
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <line x1="12" x2="12" y1="22" y2="8"></line>
+                  <path d="M5 12H2a10 10 0 0 0 20 0h-3"></path>
+                </svg>
+              </div>
+              <span>Web Harbor</span>
+            </a>
+            <p class="text-slate-400 text-xs leading-relaxed">
+              We build custom, high-converting websites for local service
+              businesses before you pay a dime. Fast, reliable, and zero upfront
+              risk.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-1">
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >US LLC &amp; SECP Compliant</span
+              >
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >Cloudflare Edge Hosted</span
+              >
+              <span
+                class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded border border-slate-700"
+                >100% Free Spec Demo</span
+              >
+            </div>
+          </div>
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Navigation
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a class="hover:text-white transition" href="./index.html"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./how-it-works/index.html"
+                  >How It Works</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./services/index.html"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./pricing/index.html"
+                  >Pricing &amp; Plans</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./portfolio/index.html"
+                  >Live Portfolio</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition" href="./about/index.html"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./contact/index.html"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Legal & Policies -->
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Legal &amp; Compliance
+            </h3>
+            <ul class="space-y-2 text-xs">
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./privacy/index.html"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a class="hover:text-white transition" href="./terms/index.html"
+                  >Terms of Service &amp; SLA</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:text-white transition"
+                  href="./liability/index.html"
+                  >Client Content &amp; Liability</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Founders & Contact -->
+          <div>
+            <h3 class="text-white font-semibold text-sm mb-3 font-display">
+              Founders &amp; Contact
+            </h3>
+            <p class="text-xs text-slate-400 mb-2">
+              <strong class="text-white">Founders:</strong> Abdul Mateen &amp;
+              Jason Gill
+            </p>
+            <p class="text-xs text-slate-400 mb-2">
+              <strong class="text-white">Email:</strong>
+              <a
+                class="hover:text-white transition"
+                href="mailto:contact@webharborsolutions.com"
+                >contact@webharborsolutions.com</a
+              >
+            </p>
+            <p class="text-xs text-slate-400">
+              <strong class="text-white">Guaranteed Response:</strong> Within 12
+              business hours
+            </p>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500"
+        >
+          <p>© 2026 Web Harbor Solutions. All rights reserved.</p>
+          <p>
+            Serving small businesses across the US, UK, Canada, and Australia.
+          </p>
         </div>
       </div>
-
-      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-        <p>&copy; 2026 Web Harbor Solutions. All rights reserved.</p>
-        <p>Serving small businesses across the US, UK, Canada, and Australia.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts: Theme Toggle, Mobile Navigation, and ROI Calculator -->
-  <script>
-    // Theme Toggle
-    function initThemeToggle() {
-      const toggleBtns = document.querySelectorAll('.theme-toggle-btn');
-      toggleBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const isDark = document.documentElement.classList.toggle('dark');
-          try {
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-          } catch (e) {}
+    </footer>
+    <!-- Scripts: Theme Toggle, Mobile Navigation, and ROI Calculator -->
+    <script>
+      // Theme Toggle
+      function initThemeToggle() {
+        const toggleBtns = document.querySelectorAll(".theme-toggle-btn");
+        toggleBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            const isDark = document.documentElement.classList.toggle("dark");
+            try {
+              localStorage.setItem("theme", isDark ? "dark" : "light");
+            } catch (e) {}
+          });
         });
-      });
-    }
-    initThemeToggle();
+      }
+      initThemeToggle();
 
-    // Mobile navigation toggle
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-    const menuIcon = document.getElementById('menu-icon');
-    const closeIcon = document.getElementById('close-icon');
+      // Mobile navigation toggle
+      const btn = document.getElementById("mobile-menu-btn");
+      const menu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const closeIcon = document.getElementById("close-icon");
 
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        const isOpen = !menu.classList.contains('hidden');
-        menu.classList.toggle('hidden');
-        menuIcon.classList.toggle('hidden', !isOpen);
-        closeIcon.classList.toggle('hidden', isOpen);
-        btn.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
+      if (btn && menu) {
+        btn.addEventListener("click", () => {
+          const isOpen = !menu.classList.contains("hidden");
+          menu.classList.toggle("hidden");
+          menuIcon.classList.toggle("hidden", !isOpen);
+          closeIcon.classList.toggle("hidden", isOpen);
+          btn.setAttribute("aria-expanded", String(!isOpen));
+        });
+      }
 
-    // ROI Calculator
-    const quoteSlider = document.getElementById('agency-quote');
-    const quoteVal = document.getElementById('agency-quote-val');
-    const hoursSlider = document.getElementById('maint-hours');
-    const hoursVal = document.getElementById('maint-hours-val');
-    const tradTotal = document.getElementById('trad-total');
-    const savingsVal = document.getElementById('savings-val');
+      // ROI Calculator
+      const quoteSlider = document.getElementById("agency-quote");
+      const quoteVal = document.getElementById("agency-quote-val");
+      const hoursSlider = document.getElementById("maint-hours");
+      const hoursVal = document.getElementById("maint-hours-val");
+      const tradTotal = document.getElementById("trad-total");
+      const savingsVal = document.getElementById("savings-val");
 
-    function updateCalculator() {
-      if (!quoteSlider || !hoursSlider) return;
-      const quote = parseInt(quoteSlider.value);
-      const hours = parseInt(hoursSlider.value);
-      quoteVal.textContent = `$${quote.toLocaleString()}`;
-      hoursVal.textContent = `${hours} hr${hours > 1 ? 's' : ''}/mo ($${hours * 100})`;
-      
-      const tradCost = quote + (hours * 100 * 12);
-      const webHarborCost = 100 + (99 * 12); // $1,288
-      const savings = tradCost - webHarborCost;
+      function updateCalculator() {
+        if (!quoteSlider || !hoursSlider) return;
+        const quote = parseInt(quoteSlider.value);
+        const hours = parseInt(hoursSlider.value);
+        quoteVal.textContent = `$${quote.toLocaleString()}`;
+        hoursVal.textContent = `${hours} hr${hours > 1 ? "s" : ""}/mo ($${hours * 100})`;
 
-      tradTotal.textContent = `$${tradCost.toLocaleString()}`;
-      savingsVal.textContent = `Save over $${savings.toLocaleString()}`;
-    }
+        const tradCost = quote + hours * 100 * 12;
+        const webHarborCost = 100 + 99 * 12; // $1,288
+        const savings = tradCost - webHarborCost;
 
-    if (quoteSlider && hoursSlider) {
-      quoteSlider.addEventListener('input', updateCalculator);
-      hoursSlider.addEventListener('input', updateCalculator);
-      updateCalculator();
-    }
-  </script>
-</body>
+        tradTotal.textContent = `$${tradCost.toLocaleString()}`;
+        savingsVal.textContent = `Save over $${savings.toLocaleString()}`;
+      }
+
+      if (quoteSlider && hoursSlider) {
+        quoteSlider.addEventListener("input", updateCalculator);
+        hoursSlider.addEventListener("input", updateCalculator);
+        updateCalculator();
+      }
+    </script>
+    <script src="js/main.js"></script>
+    <script src="./js/three_setup.js" type="module"></script>
+  </body>
 </html>

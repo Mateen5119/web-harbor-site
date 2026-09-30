@@ -135,3 +135,75 @@ function highlightActiveNavLink() {
     }
   });
 }
+
+// Lenis Smooth Scrolling Setup
+const lenis = new Lenis({
+  duration: 1.2,
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  orientation: 'vertical',
+  smoothWheel: true,
+  touchMultiplier: 2,
+});
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
+
+// GSAP Kinetic Typography Setup
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', () => {
+  gsap.utils.toArray('.reveal-text').forEach((element) => {
+    gsap.from(element, {
+      y: '100%',
+      opacity: 0,
+      duration: 1,
+      ease: 'power4.out',
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 85%',
+        toggleActions: 'play none none reverse',
+      }
+    });
+  });
+});
+
+// 3D Tilt Cards Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.tilt-card-wrapper');
+  const MAX_ROTATION = 12;
+
+  cards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const percentX = (x - centerX) / centerX;
+      const percentY = (y - centerY) / centerY;
+
+      const rotateX = -percentY * MAX_ROTATION;
+      const rotateY = percentX * MAX_ROTATION;
+
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+
+      card.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.02, 1.02, 1.02)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+      card.style.setProperty('--mouse-x', '-300px');
+      card.style.setProperty('--mouse-y', '-300px');
+      card.style.transition = 'transform 0.5s ease';
+    });
+
+    card.addEventListener('mouseenter', () => {
+      card.style.transition = 'transform 0.15s ease-out';
+    });
+  });
+});
