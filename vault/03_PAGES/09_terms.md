@@ -14,7 +14,7 @@ These Terms of Service constitute a binding agreement between Web Harbor Solutio
 - **Setup Fee:** A one-time setup fee of $100 USD is payable in two installments: 50% ($50) prior to production launch on the client domain, and the remaining 50% ($50) upon verification that the website is live[cite: 1].
 - **Monthly Service Retainer:** $99 USD per month, commencing on the date the website goes live on the Client's domain[cite: 1].
 - **Minimum Service Term:** Six (6) consecutive calendar months from the go-live date[cite: 1].
-- **Cancellation Policy:** Following the completion of the 6-month term, Client may cancel services at any time by providing thirty (30) days written notice via email to `webharborsolutions@gmail.com`[cite: 1].
+- **Cancellation Policy:** Following the completion of the 6-month term, Client may cancel services at any time by providing thirty (30) days written notice via email to `billing@webharborsolutions.com`[cite: 1].
 
 ### 3. Scope of Service ($99/mo Retainer)[cite: 1]
 - **Hosting & Infrastructure:** 99.9% uptime target hosted on Cloudflare Pages[cite: 1].

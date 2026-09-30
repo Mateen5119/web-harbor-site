@@ -21,6 +21,6 @@
 ### 2. Direct Founder Contact Information
 - **Agency Name:** Web Harbor Solutions[cite: 1]
 - **Founders:** Abdul Mateen & Jason Gill[cite: 1]
-- **Email:** `webharborsolutions@gmail.com`[cite: 1]
+- **Email:** `contact@webharborsolutions.com`[cite: 1]
 - **Operating Hours:** Monday – Friday: 9:00 AM – 6:00 PM EST (US Eastern)
 - **Response Time Guarantee:** We reply to all inquiries within 12 business hours.

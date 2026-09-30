@@ -28,4 +28,4 @@ All commercial email communications sent by Web Harbor Solutions contain clear s
 We host all client data on encrypted, enterprise-grade cloud providers (Cloudflare, Google Workspace). However, no transmission over the internet is 100% secure.
 
 ### 6. Contact Us
-For privacy questions or data deletion requests, contact: `webharborsolutions@gmail.com`[cite: 1].
+For privacy questions or data deletion requests, contact: `privacy@webharborsolutions.com`[cite: 1].
